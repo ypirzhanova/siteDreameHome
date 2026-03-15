@@ -1,0 +1,34 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #fef7f2;
+}
+
+header {
+  display: flex;
+}
+
+.menu li {
+  margin: 30px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #2b1b12;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+}
+
+.menuIcon {
+  margin: 25px;
+}
+
+.signUpButton {
+  background-color: #2b1b12;
+  width: 122px;
+  height: 48px;
+  color: #ffffff;
+  border-radius: 8px;
+}
