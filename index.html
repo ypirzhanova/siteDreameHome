@@ -5,17 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="/styles/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="styles/fonts.css" />
-    <!--<link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    /> -->
     <title>Dwello</title>
   </head>
   <body>
     <header>
-      <img src="images/logo.svg" alt="Логотип" width="150" height="150" />
+      <img class="logo" src="images/logo.svg" alt="Логотип" />
 
       <nav class="menu">
         <ul>
@@ -26,10 +20,10 @@
         </ul>
       </nav>
 
-      <div class="menuIcon" @click="">
+      <div class="menuIconLoupe" @click="">
         <img src="/images/loupe_icon.svg" alt="Найти" />
       </div>
-      <div class="menuIcon" @click="">
+      <div class="menuIconUser" @click="">
         <img src="/images/user_icon.svg" alt="Аккаунт" />
       </div>
       <button class="signUpButton">Sign up</button>
