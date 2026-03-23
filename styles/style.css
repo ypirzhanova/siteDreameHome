@@ -1,9 +1,10 @@
 body {
-  background-color: #fef7f2;
+  margin: 0px;
 }
 
 header {
   display: flex;
+  background-color: #fef7f2;
 }
 
 .logo {
@@ -13,9 +14,8 @@ header {
   margin-left: 104px;
 }
 
-.menu li{
+.menu li {
   display: flex;
-  gap: 66px;
 }
 
 .menu a {
@@ -30,6 +30,7 @@ header {
 .menu ul {
   display: flex;
   list-style: none;
+  gap: 66px;
   margin-top: 53px;
   margin-left: 289px;
   margin-right: 137px;
@@ -60,4 +61,48 @@ header {
   border-radius: 8px;
   margin-top: 40px;
   margin-right: 104px;
+}
+
+.textHome1 {
+  color: #2b1b12;
+  font-family: "Montserrat", sans-serif;
+  font-size: 72px;
+  height: 172px;
+  width: 514px;
+  font-weight: 900;
+  margin-top: 167px;
+  margin-left: 104px;
+}
+
+.textHome2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  margin-top: 32px;
+  margin-left: 103px;
+  color: #4f3527;
+  height: 87px;
+  width: 413px;
+}
+
+.signUpButton2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #2b1b12;
+  width: 176px;
+  height: 58px;
+  color: #ffffff;
+  border-radius: 8px;
+  margin-top: 113px;
+  margin-left: 142px;
+}
+
+.homeImgAndText {
+  display: flex;
+  background-color: #fef7f2;
+}
+
+.homeImg {
+  margin-top: 19px;
+  margin-right: 455px;
 }
