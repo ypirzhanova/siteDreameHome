@@ -19,12 +19,11 @@ header {
 }
 
 .menu a {
+  font-family: "Montserrat", sans-serif;
   text-decoration: none;
   font-weight: 700;
   font-size: 18px;
-  font-style: bold;
   color: #2b1b12;
-  font-family: "Montserrat", sans-serif;
 }
 
 .menu ul {
@@ -64,29 +63,30 @@ header {
 }
 
 .textHome1 {
-  color: #2b1b12;
+  color: #2B1B12;
   font-family: "Montserrat", sans-serif;
-  font-size: 72px;
+  font-size: 68px;
   height: 172px;
   width: 514px;
-  font-weight: 900;
+  font-weight: 800;
   margin-top: 167px;
   margin-left: 104px;
 }
 
 .textHome2 {
   font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   font-size: 18px;
   margin-top: 32px;
   margin-left: 103px;
-  color: #4f3527;
+  color: #4F3527;
   height: 87px;
   width: 413px;
 }
 
 .signUpButton2 {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   background-color: #2b1b12;
   width: 176px;
@@ -105,4 +105,6 @@ header {
 .homeImg {
   margin-top: 19px;
   margin-right: 455px;
+  height: 1038px;
+  width: 930px;
 }
