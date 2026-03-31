@@ -1,0 +1,113 @@
+body {
+  margin: 0px;
+}
+
+header {
+  display: flex;
+  background-color: #fef7f2;
+}
+
+.logo {
+  width: 93px;
+  height: 29px;
+  margin-top: 49px;
+  margin-left: 104px;
+}
+
+.menu li {
+  display: flex;
+}
+
+.menu a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  color: #2b1b12;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 66px;
+  margin-top: 53px;
+  margin-left: 289px;
+  margin-right: 137px;
+  line-height: 100%;
+}
+
+.menuIconUser {
+  margin-top: 52px;
+  margin-right: 44px;
+  width: 24px;
+  height: 24px;
+}
+
+.menuIconLoupe {
+  margin-top: 52px;
+  margin-right: 32px;
+  width: 24px;
+  height: 24px;
+}
+
+.signUpButton {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #2b1b12;
+  width: 122px;
+  height: 48px;
+  color: #ffffff;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-right: 104px;
+}
+
+.bannerText1 {
+  color: #2B1B12;
+  font-family: "Montserrat", sans-serif;
+  font-size: 68px;
+  height: 172px;
+  width: 514px;
+  font-weight: 800;
+  margin-top: 167px;
+  margin-left: 104px;
+  line-height: 120%;
+}
+
+.bannerText2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 32px;
+  margin-left: 103px;
+  color: #4F3527;
+  height: 87px;
+  width: 413px;
+  line-height: 160%;
+}
+
+.signUpButton2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #2b1b12;
+  width: 176px;
+  height: 58px;
+  color: #ffffff;
+  border-radius: 8px;
+  margin-top: 72px;
+  margin-left: 104px;
+}
+
+.banner {
+  display: flex;
+  background-color: #fef7f2;
+}
+
+.homeImg {
+  margin-top: 19px;
+  margin-right: 455px;
+  height: 1038px;
+  width: 930px;
+}
