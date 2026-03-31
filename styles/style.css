@@ -33,6 +33,7 @@ header {
   margin-top: 53px;
   margin-left: 289px;
   margin-right: 137px;
+  line-height: 100%;
 }
 
 .menuIconUser {
@@ -62,7 +63,7 @@ header {
   margin-right: 104px;
 }
 
-.textHome1 {
+.bannerText1 {
   color: #2B1B12;
   font-family: "Montserrat", sans-serif;
   font-size: 68px;
@@ -71,9 +72,10 @@ header {
   font-weight: 800;
   margin-top: 167px;
   margin-left: 104px;
+  line-height: 120%;
 }
 
-.textHome2 {
+.bannerText2 {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -82,6 +84,7 @@ header {
   color: #4F3527;
   height: 87px;
   width: 413px;
+  line-height: 160%;
 }
 
 .signUpButton2 {
@@ -93,11 +96,11 @@ header {
   height: 58px;
   color: #ffffff;
   border-radius: 8px;
-  margin-top: 113px;
-  margin-left: 142px;
+  margin-top: 72px;
+  margin-left: 104px;
 }
 
-.homeImgAndText {
+.banner {
   display: flex;
   background-color: #fef7f2;
 }
