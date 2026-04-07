@@ -63,6 +63,9 @@ header {
   margin-right: 104px;
 }
 
+
+/* БАННЕР */
+
 .bannerText1 {
   color: #2B1B12;
   font-family: "Montserrat", sans-serif;
@@ -106,8 +109,61 @@ header {
 }
 
 .homeImg {
-  margin-top: 19px;
+  margin-top: 40px;
   margin-right: 455px;
-  height: 1038px;
-  width: 930px;
+  height: 600px;
+  width: 830px;
 }
+
+/* ФОРМА ДЛЯ ПОКУПКИ */
+
+.findForm{
+  display: flex;
+  align-items: center;
+  width: 1070px;
+  height: 160px;
+  color: #DDC7BB;
+  border-radius: 18px;
+}
+
+.signUpButton3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #2b1b12;
+  width: 156px;
+  height: 58px;
+  color: #ffffff;
+  border-radius: 8px;
+
+}
+
+.inputForm{
+  width: 252px;
+  height: 58px;
+  color: #FBF5F1;
+  border-radius: 8px;
+}
+
+/* We Help You To Find Your Dream Home */
+
+.homeDescription {
+  display: flex;
+}
+
+.homeImg2{
+  width: 595px;
+  height: 416px;
+  border-radius: 16px;
+}
+
+.homeText1{
+  width: 514px;
+  height: 112px;
+}
+
+.homeText2{
+  width: 514px;
+  height: 87px;
+}
+
