@@ -32,7 +32,6 @@
     </header>
 
     <main>
-
       <!-- БАННЕР -->
       <section class="banner">
         <div>
@@ -54,19 +53,20 @@
 
       <!-- ФОРМА ДЛЯ ПОКУПКИ -->
 
-      <section class="findForm">
+      <section>
+        <div class="findForm">
+          <div class="inputForm">
+            <input type="text" placeholder="Location" />
+          </div>
+          <div class="inputForm">
+            <input type="text" placeholder="Type" />
+          </div>
+          <div class="inputForm">
+            <input type="text" placeholder="Price Range" />
+          </div>
 
-        <div class="inputForm">
-          <input type="text" placeholder="Location">
+          <button class="signUpButton3">Sign up</button>
         </div>
-         <div class="inputForm">
-          <input type="text" placeholder="Type">
-        </div>
-        <div class="inputForm">
-          <input type="text" placeholder="Price Range">
-        </div>
-         
-        <button class="signUpButton3">Sign up</button>
       </section>
 
       <!-- We Help You To Find Your Dream Home -->
@@ -81,14 +81,192 @@
           </div>
           <div class="homeText2">
             <p>
-              From cozy cottages to luxurious estates, our 
-              dedicated team guides you through every step of the 
-              journey, ensuring your dream home becomes a reality
+              From cozy cottages to luxurious estates, our dedicated team guides
+              you through every step of the journey, ensuring your dream home
+              becomes a reality
+            </p>
+          </div>
+          <div class="stats">
+            <div class="statItem">
+              <div class="statNumber">8K+</div>
+              <div class="statLabel">Houses Available</div>
+            </div>
+            <div class="statItem">
+              <div class="statNumber">6K+</div>
+              <div class="statLabel">Houses Sold</div>
+            </div>
+            <div class="statItem">
+              <div class="statNumber">2K+</div>
+              <div class="statLabel">Trusted Agents</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- WHY CHOOSE US -->
+      <section class="whyChooseUs">
+        <div class="sectionHeader">
+          <div class="sectionBadge">Why Choose Us</div>
+          <h2 class="sectionTitle">
+            Elevating Your Home Buying Experience with Expertise, Integrity, and
+            Unmatched Personalized Service
+          </h2>
+        </div>
+
+        <div class="featuresGrid">
+          <div class="featureCard">
+            <div class="featureIcon">
+              <img src="images/location2_icon.svg" />
+            </div>
+            <h3 class="featureTitle">Expert Guidance</h3>
+            <p class="featureDescription">
+              Benefit from our team's seasoned expertise for a smooth buying
+              experience
+            </p>
+          </div>
+
+          <div class="featureCard">
+            <div class="featureIcon">
+              <img src="images/service_icon.svg" />
+            </div>
+            <h3 class="featureTitle">Personalized Service</h3>
+            <p class="featureDescription">
+              Our services adapt to your unique needs, making your journey
+              stress-free
+            </p>
+          </div>
+
+          <div class="featureCard">
+            <div class="featureIcon">
+              <img src="images/document_icon.svg" />
+            </div>
+            <h3 class="featureTitle">Transparent Process</h3>
+            <p class="featureDescription">
+              Stay informed with our clear and honest approach to buying your
+              home
+            </p>
+          </div>
+
+          <div class="featureCard">
+            <div class="featureIcon">
+              <img src="images/hands_icon.svg" />
+            </div>
+            <h3 class="featureTitle">Exceptional Support</h3>
+            <p class="featureDescription">
+              Providing peace of mind with our responsive and attentive customer
+              service
             </p>
           </div>
         </div>
       </section>
+
+      <!--OUR POPULAR RESIDENCES-->
+
+      <section class="popular-residences">
+        <div class="popular-header">
+          <h2 class="popular-title">Our Popular Residences</h2>
+        </div>
+
+        <div class="residences-grid">
+          <div class="residence-card">
+            <img class="card-image" src="/images/home_SanFrancisco.jpg" />
+            <div class="card-content">
+              <div class="card-location">San Francisco, California</div>
+              <div class="card-details">
+                <span> 4 Rooms</span>
+                <span> $3,500 sq ft</span>
+              </div>
+              <div class="card-price-row">
+                <button class="signup-residence">Sign up</button>
+                <div class="card-price">$2,500,000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Beverly Hills Residence -->
+          <div class="residence-card">
+            <img class="card-image" src="/images/home_BeverlyHills.jpg" />
+            <div class="card-content">
+              <div class="card-location">Beverly Hills, California</div>
+              <div class="card-details">
+                <span> 3 Rooms</span>
+                <span> $1,500 sq ft</span>
+              </div>
+              <div class="card-price-row">
+                <button class="signup-residence">Sign up</button>
+                <div class="card-price">$850,000</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Palo Alto Residence -->
+          <div class="residence-card">
+            <img class="card-image" src="/images/home_PaloAlto.jpg" />
+            <div class="card-content">
+              <div class="card-location">Palo Alto, California</div>
+              <div class="card-details">
+                <span> 6 Rooms</span>
+                <span> $4,000 sq ft</span>
+              </div>
+              <div class="card-price-row">
+                <button class="signup-residence">Sign up</button>
+                <div class="card-price">$3,700,000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!--WHAT PEOPLE SAY ABOUT DWELLO-->
+
+      <!-- Do You Have Any Questions? -->
     </main>
-    <footer></footer>
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img class="footer-logo" src="images/logo.svg" alt="Dwello" />
+          <p class="footer-description">
+            Bringing you closer to your dream home, one click at a time.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h4>About</h4>
+          <ul>
+            <li><a href="#">Our Story</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Our Team</a></li>
+            <li><a href="#">Resources</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="#">FAQ</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Find Us</h4>
+          <ul>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="#">Newsletter</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h4>Our Social</h4>
+          <ul>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter (x)</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
