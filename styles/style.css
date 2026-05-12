@@ -116,6 +116,16 @@ header {
 
 /* ФОРМА ДЛЯ ПОКУПКИ */
 
+.findContainer {
+  position: relative;
+  z-index: 10;
+  margin-top: -80px;
+  margin-bottom: 144px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .findForm {
   display: flex;
   align-items: center;
@@ -123,6 +133,7 @@ header {
   height: 160px;
   background-color: #ddc7bb;
   border-radius: 18px;
+  gap: 24px;
 }
 
 .signUpButton3 {
@@ -137,15 +148,21 @@ header {
 }
 
 .inputForm input {
-  width: 252px;
-  height: 58px;
-  color: #fbf5f1;
-  border-radius: 8px;
+  border: #e6d5cb;
+   font-family: "Montserrat", sans-serif;
+   font-size: 18px;
+   font-weight: 700;
+   color: #695346;
+   width: 252px;
+   height: 58px;
+   border-radius: 8px;
+   padding-left: 15px;
 }
 
 input {
   outline: none;
   box-shadow: none;
+  background-color: #FBF5F1;
 }
 
 .inputForm ::placeholder {
@@ -155,6 +172,17 @@ input {
   line-height: 100%;
   color: #695346;
   margin-left: 15px;
+}
+
+.inputForm:last-of-type{
+  margin-right: 46px;
+}
+
+.inputIcon {
+  position: absolute;
+ 
+  width: 22px;
+  height: 22px;
 }
 
 /* We Help You To Find Your Dream Home */
@@ -294,17 +322,17 @@ input {
 
 /* OUR POPULAR RESIDENCES */
 
-.popular-residences {
+.popularResidences {
   padding: 80px 144px;
   background-color: #ffffff;
 }
 
-.popular-header {
+.popularHeader {
   text-align: center;
   margin-bottom: 64px;
 }
 
-.popular-badge {
+.popularBadge {
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -313,7 +341,7 @@ input {
   margin-bottom: 16px;
 }
 
-.popular-title {
+.popularTitle {
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
   font-weight: 800;
@@ -324,14 +352,14 @@ input {
   max-height: 56px;
 }
 
-.residences-grid {
+.residencesGrid {
   display: flex;
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
 }
 
-.residence-card {
+.residenceCard {
   background-color: #ddc7bb;
   border-radius: 24px;
   overflow: hidden;
@@ -340,18 +368,18 @@ input {
   max-height: 534px;
 }
 
-.card-image {
+.cardImage {
   width: 100%;
   height: 240px;
   object-fit: cover;
   display: block;
 }
 
-.card-content {
+.cardContent {
   padding: 24px 20px 28px;
 }
 
-.card-location {
+.cardLocation {
   font-family: "Montserrat", sans-serif;
   font-size: 20px;
   font-weight: 700;
@@ -362,7 +390,7 @@ input {
   gap: 6px;
 }
 
-.card-details {
+.cardDetails {
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
@@ -372,13 +400,13 @@ input {
   color: #4f3527;
 }
 
-.card-details span {
+.cardDetails span {
   padding: 6px 12px;
   border-radius: 20px;
   display: inline-block;
 }
 
-.card-price {
+.cardPrice {
   font-family: "Montserrat", sans-serif;
   font-size: 22px;
   font-weight: 700;
@@ -386,14 +414,14 @@ input {
   margin-bottom: 24px;
 }
 
-.card-price-row {
+.cardPriceRow {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-top: 16px;
 }
 
-.signup-residence {
+.signupResidence {
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
   font-weight: 600;
@@ -412,17 +440,51 @@ input {
 
 /* WHAT PEOPLE SAY ABOUT DWELLO */
 
+.whatHeader {
+  text-align: center;
+  margin-bottom: 64px;
+  margin-top: 199px;
+}
+
+.whatTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #2b1b12;
+  line-height: 140%;
+  margin: 0 auto;
+  max-width: 452px;
+  max-height: 112px;
+}
+
 /* Do You Have Any Questions? */
 
+.questionsHeader {
+  text-align: center;
+  margin-bottom: 64px;
+  margin-top: 199px;
+}
+
+.questionsTitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  color: #2b1b12;
+  line-height: 140%;
+  margin: 0 auto;
+  max-width: 666px;
+  max-height: 112px;
+}
+
 /* FOOTER */
-.main-footer {
+.mainFooter {
   background-color: #ddc7bb;
   color: #fbf5f1;
   padding: 64px 144px 40px;
   font-family: "Montserrat", sans-serif;
 }
 
-.footer-content {
+.footerContent {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -430,17 +492,17 @@ input {
   margin-bottom: 64px;
 }
 
-.footer-brand {
+.footerBrand {
   flex: 1.2;
   min-width: 240px;
 }
 
-.footer-logo {
+.footerLogo {
   width: 110px;
   margin-bottom: 24px;
 }
 
-.footer-description {
+.footerDescription {
   font-size: 18px;
   font-weight: 700;
   line-height: 130%;
@@ -449,29 +511,29 @@ input {
   margin-top: 8px;
 }
 
-.footer-column {
+.footerColumn {
   flex: 1;
   min-width: 140px;
 }
 
-.footer-column h4 {
+.footerColumn h4 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 24px;
   color: #2b1b12;
 }
 
-.footer-column ul {
+.footerColumn ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-column li {
+.footerColumn li {
   margin-bottom: 14px;
 }
 
-.footer-column a {
+.footerColumn a {
   color: #efe2d9;
   text-decoration: none;
   font-size: 18px;
@@ -479,23 +541,4 @@ input {
   color: #4f3527;
 }
 
-.footer-bottom {
-  border-top: 1px solid #4f3527;
-  padding-top: 32px;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 500;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
-}
 
-.footer-bottom-left p {
-  margin: 0;
-}
-
-.footer-bottom-right {
-  display: flex;
-  gap: 24px;
-}
