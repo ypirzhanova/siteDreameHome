@@ -60,7 +60,7 @@ header {
   color: #ffffff;
   border-radius: 8px;
   margin-top: 40px;
-  margin-right: 104px;
+  margin-left: 44px;
 }
 
 /* БАННЕР */
@@ -109,9 +109,8 @@ header {
 
 .homeImg {
   margin-top: 40px;
-  margin-right: 455px;
-  height: 800px;
-  width: 930px;
+  min-height: 800px;
+  min-width: 930px;
 }
 
 /* ФОРМА ДЛЯ ПОКУПКИ */
@@ -145,24 +144,40 @@ header {
   height: 58px;
   color: #ffffff;
   border-radius: 8px;
+  margin-right: 34px;
+}
+
+.inputForm {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  background-color: #fbf5f1;
+  border-radius: 8px;
+  width: 252px;
+  height: 58px;
+  box-sizing: border-box;
+  margin-left: 30px;
 }
 
 .inputForm input {
-  border: #e6d5cb;
-   font-family: "Montserrat", sans-serif;
-   font-size: 18px;
-   font-weight: 700;
-   color: #695346;
-   width: 252px;
-   height: 58px;
-   border-radius: 8px;
-   padding-left: 15px;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #695346;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  outline: none;
+  padding: 18px 0 18px 15px;
+  box-sizing: border-box;
 }
 
 input {
   outline: none;
   box-shadow: none;
-  background-color: #FBF5F1;
+  background-color: #fbf5f1;
 }
 
 .inputForm ::placeholder {
@@ -174,15 +189,14 @@ input {
   margin-left: 15px;
 }
 
-.inputForm:last-of-type{
+.inputForm:last-of-type {
   margin-right: 46px;
 }
 
 .inputIcon {
-  position: absolute;
- 
   width: 22px;
   height: 22px;
+  margin-right: 18px;
 }
 
 /* We Help You To Find Your Dream Home */
@@ -457,6 +471,92 @@ input {
   max-height: 112px;
 }
 
+.reviewsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  margin-bottom: 149px;
+}
+
+.reviewCard {
+  border-radius: 18px;
+  flex: 1;
+  background-color: #ddc7bb;
+  overflow: hidden;
+}
+
+.topImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.reviewContent {
+  padding: 24px;
+}
+
+.reviewHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.reviewerInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.reviewerImage {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.reviewerDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.reviewerName {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #2b1b12;
+  margin: 0;
+  line-height: 100%;
+}
+
+.reviewerLocation {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2b1b12;
+  margin: 0;
+  line-height: 100%;
+}
+
+.ratingIcon {
+  width: 59px;
+  height: auto;
+}
+
+.reviewText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 130%;
+  color: #4f3527;
+  margin: 0;
+}
+
 /* Do You Have Any Questions? */
 
 .questionsHeader {
@@ -476,7 +576,103 @@ input {
   max-height: 112px;
 }
 
+.questionsText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 66px;
+}
+
+.questionsItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.questionsItem p {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #543e32;
+  line-height: 100%;
+}
+
+.questionIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.questionsForm {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 149px;
+}
+
+.questionInput {
+  background-color: #ddc7bb;
+  border: none;
+  border-radius: 8px;
+  width: 505px;
+  height: 58px;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.questionInput::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 100%;
+  color: #543e32;
+  opacity: 1;
+}
+
+.questionInputWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.inputWithIcon {
+  padding-left: 56px;
+  width: 469px;
+}
+
+.inputIcon {
+  position: absolute;
+  padding: 17px 3px 17px 24px;
+  width: 22px;
+  height: 22px;
+  pointer-events: none;
+}
+
+.questionSubmitBtn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 100%;
+  color: #ffffff;
+  background-color: #2b1b12;
+  border: none;
+  border-radius: 8px;
+  width: 156px;
+  height: 58px;
+  cursor: pointer;
+}
+
+.questionsRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+  margin-bottom: 46px;
+}
+
 /* FOOTER */
+
 .mainFooter {
   background-color: #ddc7bb;
   color: #fbf5f1;
@@ -530,7 +726,7 @@ input {
 }
 
 .footerColumn li {
-  margin-bottom: 14px;
+  margin-bottom: 32px;
 }
 
 .footerColumn a {
@@ -540,5 +736,3 @@ input {
   font-weight: 700;
   color: #4f3527;
 }
-
-

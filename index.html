@@ -53,24 +53,26 @@
 
       <!-- ФОРМА ДЛЯ ПОКУПКИ -->
 
-      <section class="findContainer">
-        <div class="findForm">
-          <div class="inputForm">
-            <img src="images/location_icon.svg" class="inputIcon" />
-            <input type="text" placeholder="Location" />
-          </div>
-          <div class="inputForm">
-            <img src="images/home_icon.svg" class="inputIcon" />
-            <input type="text" placeholder="Type" />
-          </div>
-          <div class="inputForm">
-            <img src="images/price_icon.svg" class="inputIcon" />
-            <input type="text" placeholder="Price Range" />
-          </div>
+      <form action="buyForm">
+        <section class="findContainer">
+          <div class="findForm">
+            <div class="inputForm">
+              <img src="images/location_icon.svg" class="inputIcon" />
+              <input type="text" placeholder="Location" />
+            </div>
+            <div class="inputForm">
+              <img src="images/home_icon.svg" class="inputIcon" />
+              <input type="text" placeholder="Type" />
+            </div>
+            <div class="inputForm">
+              <img src="images/price_icon.svg" class="inputIcon" />
+              <input type="text" placeholder="Price Range" />
+            </div>
 
-          <button class="signUpButton3">Sign up</button>
-        </div>
-      </section>
+            <button class="signUpButton3">Sign up</button>
+          </div>
+        </section>
+      </form>
 
       <!-- We Help You To Find Your Dream Home -->
 
@@ -225,21 +227,129 @@
         <div class="whatHeader">
           <h2 class="whatTitle">What People Say About Dwello</h2>
         </div>
+
+        <div class="reviewsContainer">
+          <div class="reviewCard">
+            <img src="images/comment1.jpg" alt="Comment" class="topImage" />
+            <div class="reviewContent">
+              <div class="reviewHeader">
+                <div class="reviewerInfo">
+                  <img
+                    src="images/sarah1.png"
+                    alt="Sarah Nguyen"
+                    class="reviewerImage"
+                  />
+                  <div class="reviewerDetails">
+                    <h3 class="reviewerName">Sarah Nguyen</h3>
+                    <p class="reviewerLocation">San Francisco</p>
+                  </div>
+                </div>
+                <img src="images/mark5.svg" alt="Rating" class="ratingIcon" />
+              </div>
+              <p class="reviewText">
+                Dwello truly cares about their clients. They listened to my
+                needs and preferences and helped me find the perfect home in the
+                Bay Area. Their professionalism and attention to detail are
+                unmatched.
+              </p>
+            </div>
+          </div>
+
+          <div class="reviewCard">
+            <img src="images/comment2.jpg" alt="Comment" class="topImage" />
+            <div class="reviewContent">
+              <div class="reviewHeader">
+                <div class="reviewerInfo">
+                  <img
+                    src="images/michael2.png"
+                    alt="Michael Rodriguez"
+                    class="reviewerImage"
+                  />
+                  <div class="reviewerDetails">
+                    <h3 class="reviewerName">Michael Rodriguez</h3>
+                    <p class="reviewerLocation">San Diego</p>
+                  </div>
+                </div>
+                <img src="images/mark4.svg" alt="Rating" class="ratingIcon" />
+              </div>
+              <p class="reviewText">
+                I had a fantastic experience working with Dwello. Their
+                expertise and personalized service exceeded my expectations. I
+                found my dream home quickly and smoothly. Highly recommended!
+              </p>
+            </div>
+          </div>
+
+          <div class="reviewCard">
+            <img src="images/comment3.jpg" alt="Comment" class="topImage" />
+            <div class="reviewContent">
+              <div class="reviewHeader">
+                <div class="reviewerInfo">
+                  <img
+                    src="images/emily3.png"
+                    alt="Emily Johnson"
+                    class="reviewerImage"
+                  />
+                  <div class="reviewerDetails">
+                    <h3 class="reviewerName">Emily Johnson</h3>
+                    <p class="reviewerLocation">Los Angeles</p>
+                  </div>
+                </div>
+                <img src="images/mark5.svg" alt="Rating" class="ratingIcon" />
+              </div>
+              <p class="reviewText">
+                Dwello made my dream of owning a home a reality! Their team
+                provided exceptional support and guided me through every step of
+                the process. I couldn't be happier with my new home!
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
-
-
 
       <!-- Do You Have Any Questions? -->
 
       <section class="anyQuestions">
         <div class="questionsHeader">
-          <h2 class="questionsTitle">Do You Have Any Questions?
-Get Help From Us</h2>
+          <h2 class="questionsTitle">
+            Do You Have Any Questions? Get Help From Us
+          </h2>
+        </div>
+
+        <div class="questionsText">
+          <div class="questionsRow">
+            <div class="questionsItem">
+              <img
+                src="images/checkMark_icon.svg"
+                alt="Check"
+                class="questionIcon"
+              />
+              <p>Chat live with our support team</p>
+            </div>
+            <div class="questionsItem">
+              <img
+                src="images/checkMark_icon.svg"
+                alt="Check"
+                class="questionIcon"
+              />
+              <p>Browse our FAQ</p>
+            </div>
+          </div>
+
+          <form class="questionsForm" action="#">
+            <div class="questionInputWrapper">
+              <img src="images/email_icon.svg" alt="Check" class="inputIcon" />
+              <input
+                type="email"
+                placeholder="Enter your email address..."
+                class="questionInput inputWithIcon"
+                required
+              />
+            </div>
+            <button type="submit" class="questionSubmitBtn">Submit</button>
+          </form>
         </div>
       </section>
-
-
-
     </main>
     <footer class="mainFooter">
       <div class="footerContent">
