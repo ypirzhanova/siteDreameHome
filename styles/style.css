@@ -109,8 +109,8 @@ header {
 
 .homeImg {
   margin-top: 40px;
-  min-height: 800px;
-  min-width: 930px;
+  max-height: 760px;
+  max-width: 860px;
 }
 
 /* ФОРМА ДЛЯ ПОКУПКИ */
@@ -203,6 +203,7 @@ input {
 
 .homeDescription {
   display: flex;
+  margin-bottom: 144px;
 }
 
 .homeImg2 {
@@ -371,6 +372,7 @@ input {
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
+  margin-bottom: 140px;
 }
 
 .residenceCard {
@@ -454,10 +456,16 @@ input {
 
 /* WHAT PEOPLE SAY ABOUT DWELLO */
 
+.whatPeopleSay {
+  background-color: #fef7f2;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
 .whatHeader {
   text-align: center;
   margin-bottom: 64px;
-  margin-top: 199px;
+  margin-top: 0;
 }
 
 .whatTitle {
@@ -479,7 +487,6 @@ input {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  margin-bottom: 149px;
 }
 
 .reviewCard {
@@ -555,6 +562,21 @@ input {
   line-height: 130%;
   color: #4f3527;
   margin: 0;
+}
+
+.arrowsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 36px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.arrowIcon {
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
 }
 
 /* Do You Have Any Questions? */
@@ -735,4 +757,523 @@ input {
   font-size: 18px;
   font-weight: 700;
   color: #4f3527;
+}
+
+.socialList li {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.socialIcon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.socialList li a {
+  margin: 0;
+}
+
+/* ========== АДАПТИВНОСТЬ ========== */
+
+/* Планшеты (768px - 1024px) */
+@media (max-width: 1024px) {
+  /* Уменьшение отступов */
+  header {
+    padding: 0 20px;
+  }
+
+  .logo {
+    margin-left: 20px;
+  }
+
+  .menu ul {
+    gap: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  /* Баннер */
+  .banner {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bannerText1 {
+    font-size: 48px;
+    width: auto;
+    max-width: 90%;
+    height: auto;
+    margin: 100px auto 0;
+    text-align: center;
+  }
+
+  .bannerText2 {
+    width: auto;
+    max-width: 80%;
+    height: auto;
+    margin: 20px auto 0;
+    text-align: center;
+  }
+
+  .signUpButton2 {
+    margin: 40px auto 0;
+    display: block;
+  }
+
+  .homeImg {
+    max-width: 90%;
+    height: auto;
+    margin: 40px auto;
+  }
+
+  /* Форма */
+  .findForm {
+    width: 90%;
+    height: auto;
+    flex-direction: column;
+    padding: 30px;
+    gap: 15px;
+  }
+
+  .inputForm {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .inputForm:last-of-type {
+    margin-right: 0;
+  }
+
+  .signUpButton3 {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  /* Home Description */
+  .homeDescription {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .homeImg2 {
+    margin: 0 auto 40px;
+    max-width: 90%;
+    height: auto;
+  }
+
+  .homeText1 {
+    margin: 0 auto;
+    width: auto;
+    max-width: 90%;
+    height: auto;
+  }
+
+  .homeText2 {
+    margin: 20px auto;
+    width: auto;
+    max-width: 90%;
+    height: auto;
+  }
+
+  .stats {
+    margin: 40px auto;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: auto;
+    max-width: 90%;
+  }
+
+  /* Why Choose Us */
+  .whyChooseUs {
+    padding: 60px 40px;
+  }
+
+  .featuresGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+
+  .featureCard {
+    max-width: none;
+  }
+
+  /* Popular Residences */
+  .popularResidences {
+    padding: 60px 40px;
+  }
+
+  .residencesGrid {
+    gap: 20px;
+  }
+
+  /* Reviews */
+  .reviewsContainer {
+    flex-wrap: wrap;
+  }
+
+  .reviewCard {
+    flex: 0 0 calc(50% - 16px);
+  }
+
+  /* Questions */
+  .questionsTitle {
+    font-size: 32px;
+    padding: 0 20px;
+  }
+
+  .questionsForm {
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .questionInputWrapper {
+    width: 100%;
+  }
+
+  .questionInput {
+    width: 100%;
+  }
+
+  .inputWithIcon {
+    width: 100%;
+    padding-left: 56px;
+  }
+
+  .questionSubmitBtn {
+    width: 100%;
+  }
+
+  .questionsRow {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Footer */
+  .mainFooter {
+    padding: 50px 40px 40px;
+  }
+
+  .footerContent {
+    gap: 30px;
+  }
+
+  .footerBrand {
+    flex: 1;
+    min-width: 200px;
+  }
+}
+
+/* Мобильные устройства (до 768px) */
+@media (max-width: 768px) {
+  /* Уменьшение шрифтов */
+  .bannerText1 {
+    font-size: 32px;
+  }
+
+  .bannerText2 {
+    font-size: 16px;
+  }
+
+  .homeText1 {
+    font-size: 28px;
+  }
+
+  .homeText2 {
+    font-size: 16px;
+  }
+
+  .whatTitle,
+  .popularTitle,
+  .questionsTitle {
+    font-size: 28px;
+  }
+
+  .sectionBadge {
+    font-size: 28px;
+  }
+
+  /* Header - адаптивное меню */
+  .menu ul {
+    display: none;
+  }
+
+  /* Можно добавить гамбургер-меню, но для простоты - скрываем */
+  .menuIconLoupe,
+  .menuIconUser {
+    display: none;
+  }
+
+  .signUpButton {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  /* Уменьшение отступов */
+  .whyChooseUs {
+    padding: 40px 20px;
+  }
+
+  .popularResidences {
+    padding: 40px 20px;
+  }
+
+  .whatPeopleSay {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .whatHeader {
+    margin-bottom: 30px;
+  }
+
+  /* Сетка: 1 колонка вместо нескольких */
+  .featuresGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .residencesGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .residenceCard {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  /* Отмена обтекания для отзывов */
+  .reviewsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .reviewCard {
+    flex: 0 0 100%;
+    max-width: 400px;
+  }
+
+  /* Уменьшение отступов */
+  .stats {
+    gap: 30px;
+  }
+
+  .statNumber {
+    font-size: 36px;
+  }
+
+  .statLabel {
+    font-size: 14px;
+  }
+
+  /* Questions section */
+  .questionsHeader {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+
+  .questionsText {
+    margin-bottom: 40px;
+  }
+
+  .questionsForm {
+    margin-bottom: 60px;
+  }
+
+  /* Стрелки */
+  .arrowsContainer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .arrowIcon {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Footer - колонки в столбик */
+  .footerContent {
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .footerBrand {
+    text-align: center;
+  }
+
+  .footerDescription {
+    margin: 8px auto 0;
+  }
+
+  .socialList li {
+    justify-content: center;
+  }
+
+  /* Скрытие второстепенного контента (опционально) */
+  /* .someSecondaryContent { display: none; } */
+}
+
+/* Маленькие мобильные (до 480px) */
+@media (max-width: 480px) {
+  /* Ещё большее уменьшение шрифтов */
+  .bannerText1 {
+    font-size: 28px;
+  }
+
+  .homeText1 {
+    font-size: 24px;
+  }
+
+  .whatTitle,
+  .popularTitle,
+  .questionsTitle {
+    font-size: 24px;
+  }
+
+  .sectionBadge {
+    font-size: 24px;
+  }
+
+  .reviewerName {
+    font-size: 18px;
+  }
+
+  .reviewerLocation {
+    font-size: 14px;
+  }
+
+  .reviewText {
+    font-size: 14px;
+  }
+
+  /* Уменьшение отступов */
+  .whyChooseUs {
+    padding: 30px 15px;
+  }
+
+  .popularResidences {
+    padding: 30px 15px;
+  }
+
+  .reviewContent {
+    padding: 18px;
+  }
+
+  .featureCard {
+    padding: 24px 18px;
+  }
+
+  /* Header */
+  .logo {
+    width: 70px;
+    margin-top: 30px;
+  }
+
+  .signUpButton {
+    width: 90px;
+    height: 40px;
+    font-size: 14px;
+    margin-top: 30px;
+  }
+
+  /* Форма */
+  .findForm {
+    padding: 20px;
+  }
+
+  .inputForm input {
+    font-size: 14px;
+  }
+
+  .inputForm ::placeholder {
+    font-size: 14px;
+  }
+
+  .signUpButton3 {
+    height: 48px;
+    font-size: 16px;
+  }
+
+  /* Карточки */
+  .cardLocation {
+    font-size: 18px;
+  }
+
+  .cardDetails {
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .cardPrice {
+    font-size: 18px;
+  }
+
+  /* Кнопки */
+  .signUpButton2 {
+    width: 140px;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .questionSubmitBtn {
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .questionInput {
+    height: 48px;
+  }
+
+  .questionInput::placeholder {
+    font-size: 14px;
+  }
+
+  /* Footer */
+  .mainFooter {
+    padding: 40px 20px 30px;
+  }
+
+  .footerColumn h4 {
+    font-size: 20px;
+  }
+
+  .footerColumn a {
+    font-size: 16px;
+  }
+
+  .footerDescription {
+    font-size: 16px;
+  }
+
+  .socialIcon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .socialList li {
+    gap: 14px;
+  }
+}
+
+/* Планшеты в альбомной ориентации (до 900px) */
+@media (max-width: 900px) and (orientation: landscape) {
+  .banner {
+    flex-direction: row;
+  }
+
+  .bannerText1 {
+    font-size: 36px;
+    margin-top: 60px;
+  }
+
+  .homeImg {
+    max-width: 50%;
+  }
 }
