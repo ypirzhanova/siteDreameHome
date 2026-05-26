@@ -5,6 +5,15 @@ body {
 header {
   display: flex;
   background-color: #fef7f2;
+  justify-content: center;
+  width: 100%;
+}
+
+header > div, 
+header > nav, 
+header > a, 
+header > button {
+  flex-shrink: 0;
 }
 
 .logo {
@@ -64,17 +73,30 @@ header {
 }
 
 /* БАННЕР */
+.banner {
+  display: flex;
+  background-color: #fef7f2;
+  justify-content: center;
+  width: 100%;
+}
+
+.banner > div:first-child {
+  flex-shrink: 0;
+}
 
 .bannerText1 {
   color: #2b1b12;
   font-family: "Montserrat", sans-serif;
   font-size: 68px;
-  height: 172px;
   width: 514px;
   font-weight: 800;
   margin-top: 167px;
   margin-left: 104px;
   line-height: 120%;
+}
+
+.bannerText1 p {
+  margin: 0;
 }
 
 .bannerText2 {
@@ -84,9 +106,12 @@ header {
   margin-top: 32px;
   margin-left: 103px;
   color: #4f3527;
-  height: 87px;
   width: 413px;
   line-height: 160%;
+}
+
+.bannerText2 p {
+  margin: 0;
 }
 
 .signUpButton2 {
@@ -102,15 +127,11 @@ header {
   margin-left: 104px;
 }
 
-.banner {
-  display: flex;
-  background-color: #fef7f2;
-}
-
 .homeImg {
   margin-top: 40px;
   max-height: 760px;
   max-width: 860px;
+  display: block;
 }
 
 /* ФОРМА ДЛЯ ПОКУПКИ */
@@ -204,6 +225,10 @@ input {
 .homeDescription {
   display: flex;
   margin-bottom: 144px;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 .homeImg2 {
@@ -215,7 +240,6 @@ input {
 
 .homeText1 {
   width: 514px;
-  height: 112px;
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
   font-weight: 800;
@@ -224,15 +248,22 @@ input {
   margin-left: 106px;
 }
 
+.homeText1 p {
+  margin: 0;
+}
+
 .homeText2 {
   width: 514px;
-  height: 87px;
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 700;
   color: #4f3527;
   line-height: 160%;
   margin-left: 106px;
+}
+
+.homeText2 p {
+  margin: 0;
 }
 
 .stats {
@@ -347,15 +378,6 @@ input {
   margin-bottom: 64px;
 }
 
-.popularBadge {
-  font-family: "Montserrat", sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  color: #8b6b52;
-  letter-spacing: 1px;
-  margin-bottom: 16px;
-}
-
 .popularTitle {
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
@@ -364,7 +386,6 @@ input {
   line-height: 140%;
   margin: 0 auto;
   max-width: 512px;
-  max-height: 56px;
 }
 
 .residencesGrid {
@@ -372,7 +393,6 @@ input {
   justify-content: center;
   gap: 30px;
   flex-wrap: wrap;
-  margin-bottom: 140px;
 }
 
 .residenceCard {
@@ -381,7 +401,12 @@ input {
   overflow: hidden;
   width: 350px;
   max-width: 382px;
-  max-height: 534px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.residenceCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .cardImage {
@@ -403,31 +428,36 @@ input {
   margin-bottom: 12px;
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
+}
+
+.locationIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .cardDetails {
   display: flex;
   gap: 20px;
   margin-bottom: 20px;
+}
+
+.detailItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   font-weight: 600;
   color: #4f3527;
+  padding: 6px 0;
 }
 
-.cardDetails span {
-  padding: 6px 12px;
-  border-radius: 20px;
-  display: inline-block;
-}
-
-.cardPrice {
-  font-family: "Montserrat", sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-  color: #4f3527;
-  margin-bottom: 24px;
+.detailIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .cardPriceRow {
@@ -435,6 +465,13 @@ input {
   justify-content: space-between;
   align-items: center;
   margin-top: 16px;
+}
+
+.cardPrice {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #4f3527;
 }
 
 .signupResidence {
@@ -446,14 +483,105 @@ input {
   border: none;
   border-radius: 12px;
   padding: 12px 20px;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 98px;
-  max-height: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
+.signupResidence:hover {
+  background-color: #3d2a1f;
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 1200px) {
+  .popularResidences {
+    padding: 60px 40px;
+  }
+  
+  .residencesGrid {
+    gap: 20px;
+  }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+  .popularResidences {
+    padding: 40px 20px;
+  }
+  
+  .popularTitle {
+    font-size: 28px;
+  }
+  
+  .residencesGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .residenceCard {
+    width: 100%;
+    max-width: 350px;
+  }
+  
+  .cardLocation {
+    font-size: 18px;
+  }
+  
+  .detailItem {
+    font-size: 14px;
+  }
+  
+  .cardPrice {
+    font-size: 18px;
+  }
+}
+
+/* Адаптивность для маленьких мобильных */
+@media (max-width: 480px) {
+  .popularResidences {
+    padding: 30px 15px;
+  }
+  
+  .popularTitle {
+    font-size: 24px;
+  }
+  
+  .cardContent {
+    padding: 20px 16px 24px;
+  }
+  
+  .cardLocation {
+    font-size: 16px;
+    gap: 6px;
+  }
+  
+  .locationIcon {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .detailItem {
+    font-size: 12px;
+    gap: 4px;
+  }
+  
+  .detailIcon {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .cardDetails {
+    gap: 12px;
+  }
+  
+  .cardPrice {
+    font-size: 16px;
+  }
+  
+  .signupResidence {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+}
 /* WHAT PEOPLE SAY ABOUT DWELLO */
 
 .whatPeopleSay {
@@ -476,7 +604,6 @@ input {
   line-height: 140%;
   margin: 0 auto;
   max-width: 452px;
-  max-height: 112px;
 }
 
 .reviewsContainer {
@@ -595,7 +722,6 @@ input {
   line-height: 140%;
   margin: 0 auto;
   max-width: 666px;
-  max-height: 112px;
 }
 
 .questionsText {
@@ -663,7 +789,7 @@ input {
   width: 469px;
 }
 
-.inputIcon {
+.questionInputWrapper .inputIcon {
   position: absolute;
   padding: 17px 3px 17px 24px;
   width: 22px;
@@ -778,11 +904,62 @@ input {
 
 /* ========== АДАПТИВНОСТЬ ========== */
 
-/* Планшеты (768px - 1024px) */
-@media (max-width: 1024px) {
+/* Для очень больших экранов - центрируем контент внутри header и баннера */
+@media (min-width: 1440px) {
+  header {
+    justify-content: center;
+  }
+  
+  header > a:first-child {
+    margin-left: auto;
+  }
+  
+  header > .signUpButton {
+    margin-right: auto;
+  }
+  
+  .banner {
+    justify-content: center;
+  }
+  
+  .banner > div:first-child {
+    margin-left: auto;
+  }
+  
+  .banner > div:last-child {
+    margin-right: auto;
+  }
+  
+  .homeDescription {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Планшеты (до 1440px) */
+@media (max-width: 1440px) {
+  header {
+    justify-content: center;
+  }
+  
+  .banner {
+    justify-content: center;
+  }
+  
+  .homeDescription {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 1200px) {
   /* Уменьшение отступов */
   header {
     padding: 0 20px;
+    justify-content: space-between;
+    box-sizing: border-box;
   }
 
   .logo {
@@ -794,11 +971,12 @@ input {
     margin-left: 40px;
     margin-right: 40px;
   }
-
-  /* Баннер */
+  
   .banner {
     flex-direction: column;
     align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 
   .bannerText1 {
@@ -806,7 +984,9 @@ input {
     width: auto;
     max-width: 90%;
     height: auto;
-    margin: 100px auto 0;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
   }
 
@@ -858,6 +1038,8 @@ input {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
   }
 
   .homeImg2 {
@@ -870,14 +1052,12 @@ input {
     margin: 0 auto;
     width: auto;
     max-width: 90%;
-    height: auto;
   }
 
   .homeText2 {
     margin: 20px auto;
     width: auto;
     max-width: 90%;
-    height: auto;
   }
 
   .stats {
@@ -887,6 +1067,7 @@ input {
     flex-wrap: wrap;
     width: auto;
     max-width: 90%;
+    margin-left: auto;
   }
 
   /* Why Choose Us */
@@ -943,6 +1124,7 @@ input {
   .inputWithIcon {
     width: 100%;
     padding-left: 56px;
+    box-sizing: border-box;
   }
 
   .questionSubmitBtn {
@@ -1003,7 +1185,6 @@ input {
     display: none;
   }
 
-  /* Можно добавить гамбургер-меню, но для простоты - скрываем */
   .menuIconLoupe,
   .menuIconUser {
     display: none;
@@ -1115,9 +1296,6 @@ input {
   .socialList li {
     justify-content: center;
   }
-
-  /* Скрытие второстепенного контента (опционально) */
-  /* .someSecondaryContent { display: none; } */
 }
 
 /* Маленькие мобильные (до 480px) */
@@ -1262,18 +1440,3 @@ input {
   }
 }
 
-/* Планшеты в альбомной ориентации (до 900px) */
-@media (max-width: 900px) and (orientation: landscape) {
-  .banner {
-    flex-direction: row;
-  }
-
-  .bannerText1 {
-    font-size: 36px;
-    margin-top: 60px;
-  }
-
-  .homeImg {
-    max-width: 50%;
-  }
-}
