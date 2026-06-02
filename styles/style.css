@@ -2,6 +2,15 @@ body {
   margin: 0px;
 }
 
+html {
+  font-size: 16px;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
 header {
   display: flex;
   background-color: #fef7f2;
@@ -9,18 +18,18 @@ header {
   width: 100%;
 }
 
-header > div, 
-header > nav, 
-header > a, 
+header > div,
+header > nav,
+header > a,
 header > button {
   flex-shrink: 0;
 }
 
 .logo {
-  width: 93px;
-  height: 29px;
-  margin-top: 49px;
-  margin-left: 104px;
+  max-width: 5.8125rem;
+  max-height: 1.8125rem;
+  margin-top: 3.0625rem;
+  margin-left: 6.5rem;
 }
 
 .menu li {
@@ -31,17 +40,34 @@ header > button {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.125rem;
   color: #2b1b12;
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.menu a:hover {
+  color: #ddc7bb;
+  transform: translateY(-2px);
+}
+
+.menu a:focus {
+  outline: 2px solid #2b1b12;
+  outline-offset: 4px;
+}
+
+.menu a:active {
+  transform: translateY(0);
 }
 
 .menu ul {
   display: flex;
   list-style: none;
-  gap: 66px;
-  margin-top: 53px;
-  margin-left: 289px;
-  margin-right: 137px;
+  gap: 4.125rem;
+  margin-top: 3.3125rem;
+  margin-left: 18.0625rem;
+  margin-right: 8.5625rem;
   line-height: 100%;
 }
 
@@ -59,19 +85,179 @@ header > button {
   height: 24px;
 }
 
-.signUpButton {
-  font-family: "Montserrat", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  background-color: #2b1b12;
-  width: 122px;
-  height: 48px;
-  color: #ffffff;
-  border-radius: 8px;
-  margin-top: 40px;
-  margin-left: 44px;
+.menuIconLoupe,
+.menuIconUser {
+  transition:
+    opacity 0.3s ease,
+    transform 0.2s ease;
 }
 
+.menuIconLoupe:hover,
+.menuIconUser:hover {
+  opacity: 0.7;
+  transform: scale(1.05);
+}
+
+.menuIconLoupe:focus,
+.menuIconUser:focus {
+  outline: 2px solid #2b1b12;
+  outline-offset: 4px;
+}
+
+.menuIconLoupe:active,
+.menuIconUser:active {
+  transform: scale(0.95);
+}
+
+.signUpButton {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: #2b1b12;
+  padding: 0.875rem 1.8125rem;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  margin-top: 2.5rem;
+  margin-left: 2.75rem;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.signUpButton:hover {
+  background-color: #3d2a1f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signUpButton:focus {
+  outline: 3px solid #ddc7bb;
+  outline-offset: 2px;
+}
+
+.signUpButton:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+/* ========== БУРГЕР-МЕНЮ ========== */
+.burger-menu {
+  display: none;
+}
+
+.burger-checkbox {
+  position: absolute;
+  visibility: hidden;
+}
+
+.burger {
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+  display: block;
+  border: none;
+  background: transparent;
+  width: 30px;
+  height: 20px;
+  margin: 10px;
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  left: 0;
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 3px;
+  border-radius: 10px;
+  background: #2b1b12;
+}
+
+.burger::before {
+  top: 0;
+  box-shadow: 0 8px 0 #2b1b12;
+  transition:
+    box-shadow 0.3s 0.15s,
+    top 0.3s 0.15s,
+    transform 0.3s;
+}
+
+.burger::after {
+  bottom: 0;
+  transition:
+    bottom 0.3s 0.15s,
+    transform 0.3s;
+}
+
+.burger-checkbox:checked + .burger::before {
+  top: 8px;
+  transform: rotate(45deg);
+  box-shadow: 0 6px 0 rgba(0, 0, 0, 0);
+  transition:
+    box-shadow 0.15s,
+    top 0.3s,
+    transform 0.3s 0.15s;
+}
+
+.burger-checkbox:checked + .burger::after {
+  bottom: 9px;
+  transform: rotate(-45deg);
+  transition:
+    bottom 0.3s,
+    transform 0.3s 0.15s;
+}
+
+.menu-list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 100px 0 40px;
+  margin: 0;
+  background: #fef7f2;
+  list-style-type: none;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  width: 80%;
+  max-width: 300px;
+  height: 100vh;
+  z-index: 90;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item {
+  display: block;
+  padding: 12px 24px;
+  color: #2b1b12;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.menu-item:hover {
+  background: #ddc7bb;
+}
+
+.burger-checkbox:checked ~ .menu-list {
+  transform: translateX(0);
+}
+
+.burger-checkbox:checked ~ .menu-list::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
 /* БАННЕР */
 .banner {
   display: flex;
@@ -119,12 +305,31 @@ header > button {
   font-size: 18px;
   font-weight: 600;
   background-color: #2b1b12;
-  width: 176px;
-  height: 58px;
+  padding: 18px 53px;
   color: #ffffff;
   border-radius: 8px;
   margin-top: 72px;
   margin-left: 104px;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.signUpButton2:hover {
+  background-color: #3d2a1f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signUpButton2:focus {
+  outline: 3px solid #ddc7bb;
+  outline-offset: 2px;
+}
+
+.signUpButton2:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .homeImg {
@@ -150,10 +355,11 @@ header > button {
   display: flex;
   align-items: center;
   width: 1070px;
-  height: 160px;
+  min-height: 160px;
   background-color: #ddc7bb;
   border-radius: 18px;
   gap: 24px;
+  padding: 0;
 }
 
 .signUpButton3 {
@@ -161,11 +367,36 @@ header > button {
   font-size: 18px;
   font-weight: 600;
   background-color: #2b1b12;
-  width: 156px;
-  height: 58px;
+  padding: 18px 42px;
   color: #ffffff;
   border-radius: 8px;
-  margin-right: 34px;
+  margin-right: 46px;
+  margin-left: 0;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  display: inline-block;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.signUpButton3:hover {
+  background-color: #3d2a1f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.signUpButton3:focus {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.signUpButton3:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .inputForm {
@@ -175,8 +406,8 @@ header > button {
   align-items: center;
   background-color: #fbf5f1;
   border-radius: 8px;
-  width: 252px;
-  height: 58px;
+  max-width: 252px;
+  max-height: 58px;
   box-sizing: border-box;
   margin-left: 30px;
 }
@@ -369,7 +600,8 @@ input {
 /* OUR POPULAR RESIDENCES */
 
 .popularResidences {
-  padding: 80px 144px;
+  padding-bottom: 143px;
+  padding-top: 64px;
   background-color: #ffffff;
 }
 
@@ -391,7 +623,7 @@ input {
 .residencesGrid {
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 60px;
   flex-wrap: wrap;
 }
 
@@ -399,9 +631,10 @@ input {
   background-color: #ddc7bb;
   border-radius: 24px;
   overflow: hidden;
-  width: 350px;
   max-width: 382px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .residenceCard:hover {
@@ -410,8 +643,8 @@ input {
 }
 
 .cardImage {
-  width: 100%;
-  height: 240px;
+  max-width: 382px;
+  max-height: 356px;
   object-fit: cover;
   display: block;
 }
@@ -432,8 +665,8 @@ input {
 }
 
 .locationIcon {
-  width: 20px;
-  height: 20px;
+  max-width: 20px;
+  max-height: 20px;
   flex-shrink: 0;
 }
 
@@ -455,9 +688,13 @@ input {
 }
 
 .detailIcon {
-  width: 18px;
-  height: 18px;
+  max-width: 24px;
+  max-height: 24px;
   flex-shrink: 0;
+  background-color: #ffffff;
+  border-radius: 4px;
+  padding: 0;
+  object-fit: contain;
 }
 
 .cardPriceRow {
@@ -481,24 +718,49 @@ input {
   background-color: #2b1b12;
   color: #ffffff;
   border: none;
-  border-radius: 12px;
-  padding: 12px 20px;
+  border-radius: 8px;
+  padding: 11px 21px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  display: inline-block;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .signupResidence:hover {
   background-color: #3d2a1f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Адаптивность для планшетов */
+.signupResidence:focus {
+  outline: 3px solid #ddc7bb;
+  outline-offset: 2px;
+}
+
+.signupResidence:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
 @media (max-width: 1200px) {
   .popularResidences {
     padding: 60px 40px;
   }
-  
+
   .residencesGrid {
     gap: 20px;
+  }
+
+  .residenceCard {
+    width: 340px;
+  }
+
+  .cardImage {
+    width: 340px;
+    height: 317px;
   }
 }
 
@@ -507,76 +769,113 @@ input {
   .popularResidences {
     padding: 40px 20px;
   }
-  
+
   .popularTitle {
     font-size: 28px;
   }
-  
+
   .residencesGrid {
     flex-direction: column;
     align-items: center;
   }
-  
+
   .residenceCard {
     width: 100%;
-    max-width: 350px;
+    max-width: 382px;
   }
-  
+
+  .cardImage {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 382 / 356;
+  }
+
   .cardLocation {
     font-size: 18px;
   }
-  
+
   .detailItem {
     font-size: 14px;
   }
-  
+
   .cardPrice {
     font-size: 18px;
   }
 }
 
-/* Адаптивность для маленьких мобильных */
 @media (max-width: 480px) {
+  .burger {
+    width: 26px;
+    height: 18px;
+  }
+
+  .burger::before {
+    box-shadow: 0 7px 0 #2b1b12;
+  }
+
+  .burger-checkbox:checked + .burger::before {
+    top: 7px;
+  }
+
+  .burger-checkbox:checked + .burger::after {
+    bottom: 8px;
+  }
+
+  .menu-list {
+    width: 85%;
+    max-width: 280px;
+  }
+
+  .menu-item {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  .signUpButton {
+    padding: 8px 14px;
+    font-size: 11px;
+    margin-right: 12px;
+  }
   .popularResidences {
     padding: 30px 15px;
   }
-  
+
   .popularTitle {
     font-size: 24px;
   }
-  
+
   .cardContent {
     padding: 20px 16px 24px;
   }
-  
+
   .cardLocation {
     font-size: 16px;
     gap: 6px;
   }
-  
+
   .locationIcon {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   }
-  
+
   .detailItem {
     font-size: 12px;
     gap: 4px;
   }
-  
+
   .detailIcon {
-    width: 14px;
-    height: 14px;
+    width: 20px;
+    height: 20px;
   }
-  
+
   .cardDetails {
     gap: 12px;
   }
-  
+
   .cardPrice {
     font-size: 16px;
   }
-  
+
   .signupResidence {
     font-size: 12px;
     padding: 10px 16px;
@@ -704,6 +1003,23 @@ input {
   width: 56px;
   height: 56px;
   cursor: pointer;
+  transition:
+    opacity 0.3s ease,
+    transform 0.2s ease;
+}
+
+.arrowIcon:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+.arrowIcon:focus {
+  outline: 2px solid #2b1b12;
+  border-radius: 50%;
+}
+
+.arrowIcon:active {
+  transform: scale(0.95);
 }
 
 /* Do You Have Any Questions? */
@@ -806,9 +1122,14 @@ input {
   background-color: #2b1b12;
   border: none;
   border-radius: 8px;
-  width: 156px;
-  height: 58px;
+  padding: 18px 44px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+}
+
+.questionSubmitBtn:hover {
+  background-color: #3d2a1f;
 }
 
 .questionsRow {
@@ -883,6 +1204,23 @@ input {
   font-size: 18px;
   font-weight: 700;
   color: #4f3527;
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+
+.footerColumn a:hover {
+  color: #2b1b12;
+  transform: translateX(4px);
+}
+
+.footerColumn a:focus {
+  outline: 2px solid #2b1b12;
+  outline-offset: 4px;
+}
+
+.footerColumn a:active {
+  transform: translateX(0);
 }
 
 .socialList li {
@@ -896,6 +1234,14 @@ input {
   width: 24px;
   height: 24px;
   flex-shrink: 0;
+  transition:
+    opacity 0.3s ease,
+    transform 0.2s ease;
+}
+
+.socialList li:hover .socialIcon {
+  opacity: 0.7;
+  transform: scale(1.1);
 }
 
 .socialList li a {
@@ -904,32 +1250,31 @@ input {
 
 /* ========== АДАПТИВНОСТЬ ========== */
 
-/* Для очень больших экранов - центрируем контент внутри header и баннера */
 @media (min-width: 1440px) {
   header {
     justify-content: center;
   }
-  
+
   header > a:first-child {
     margin-left: auto;
   }
-  
+
   header > .signUpButton {
     margin-right: auto;
   }
-  
+
   .banner {
     justify-content: center;
   }
-  
+
   .banner > div:first-child {
     margin-left: auto;
   }
-  
+
   .banner > div:last-child {
     margin-right: auto;
   }
-  
+
   .homeDescription {
     max-width: 1440px;
     margin-left: auto;
@@ -937,16 +1282,15 @@ input {
   }
 }
 
-/* Планшеты (до 1440px) */
 @media (max-width: 1440px) {
   header {
     justify-content: center;
   }
-  
+
   .banner {
     justify-content: center;
   }
-  
+
   .homeDescription {
     max-width: 1200px;
     margin-left: auto;
@@ -955,7 +1299,6 @@ input {
 }
 
 @media (max-width: 1200px) {
-  /* Уменьшение отступов */
   header {
     padding: 0 20px;
     justify-content: space-between;
@@ -971,7 +1314,7 @@ input {
     margin-left: 40px;
     margin-right: 40px;
   }
-  
+
   .banner {
     flex-direction: column;
     align-items: center;
@@ -1030,7 +1373,9 @@ input {
 
   .signUpButton3 {
     margin-right: 0;
-    width: 100%;
+    width: auto;
+    padding: 16px 32px;
+    white-space: nowrap;
   }
 
   /* Home Description */
@@ -1109,12 +1454,14 @@ input {
   }
 
   .questionsForm {
-    flex-direction: column;
+    flex-direction: row;
     width: 90%;
+    gap: 12px;
   }
 
   .questionInputWrapper {
-    width: 100%;
+    width: auto;
+    flex: 1;
   }
 
   .questionInput {
@@ -1128,7 +1475,9 @@ input {
   }
 
   .questionSubmitBtn {
-    width: 100%;
+    width: auto;
+    padding: 18px 32px;
+    white-space: nowrap;
   }
 
   .questionsRow {
@@ -1151,8 +1500,39 @@ input {
   }
 }
 
-/* Мобильные устройства (до 768px) */
 @media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+    margin-top: 35px;
+    order: 3;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menuIconLoupe,
+  .menuIconUser {
+    display: none;
+  }
+
+  .signUpButton {
+    margin-left: auto;
+    margin-right: 16px;
+    order: 2;
+  }
+
+  .logo {
+    margin-left: 16px;
+    order: 1;
+  }
+
+  header {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
   /* Уменьшение шрифтов */
   .bannerText1 {
     font-size: 32px;
@@ -1298,9 +1678,7 @@ input {
   }
 }
 
-/* Маленькие мобильные (до 480px) */
 @media (max-width: 480px) {
-  /* Ещё большее уменьшение шрифтов */
   .bannerText1 {
     font-size: 28px;
   }
@@ -1355,10 +1733,12 @@ input {
   }
 
   .signUpButton {
-    width: 90px;
-    height: 40px;
+    padding: 10px 20px;
     font-size: 14px;
-    margin-top: 30px;
+    margin-top: 35px;
+    margin-left: auto;
+    margin-right: 0;
+    white-space: nowrap;
   }
 
   /* Форма */
@@ -1395,9 +1775,12 @@ input {
 
   /* Кнопки */
   .signUpButton2 {
-    width: 140px;
-    height: 48px;
-    font-size: 16px;
+    padding: 12px 32px;
+    font-size: 14px;
+    margin: 30px auto 0;
+    display: block;
+    width: auto;
+    white-space: nowrap;
   }
 
   .questionSubmitBtn {
@@ -1439,4 +1822,165 @@ input {
     gap: 14px;
   }
 }
+/* МОДАЛЬНОЕ ОКНО */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0.2s,
+    opacity 0.2s ease;
+}
 
+.modalOverlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modalContainer {
+  background-color: #fef7f2;
+  max-width: 440px;
+  width: 90%;
+  border-radius: 28px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+  position: relative;
+  padding: 32px 28px 38px;
+  font-family: "Montserrat", sans-serif;
+  transition: transform 0.2s ease;
+  transform: scale(0.96);
+}
+
+.modalOverlay.active .modalContainer {
+  transform: scale(1);
+}
+
+.modalCloseBtn {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  background: #ddc7bb;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.modalCloseBtn:hover {
+  background-color: #2b1b12;
+  transform: rotate(90deg);
+}
+
+.modalCloseBtn:hover svg path {
+  stroke: #fef7f2;
+}
+
+.modalCloseBtn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.modalCloseBtn svg path {
+  stroke: #2b1b12;
+  stroke-width: 2;
+  transition: stroke 0.2s;
+}
+
+.modalTitle {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  color: #2b1b12;
+  margin: 0 0 28px 0;
+  letter-spacing: -0.3px;
+}
+
+.modalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.inputGroup label {
+  font-weight: 700;
+  font-size: 15px;
+  color: #4f3527;
+  margin-left: 6px;
+}
+
+.modalInput {
+  background: #fbf5f1;
+  border: 1px solid #ddc7bb;
+  border-radius: 18px;
+  padding: 16px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #2b1b12;
+  transition: all 0.2s;
+  outline: none;
+}
+
+.modalInput:focus {
+  border-color: #2b1b12;
+  box-shadow: 0 0 0 3px rgba(43, 27, 18, 0.1);
+}
+
+.modalInput::placeholder {
+  color: #b9a28c;
+  font-weight: 500;
+}
+
+.modalSignupBtn {
+  background-color: #2b1b12;
+  border: none;
+  border-radius: 40px;
+  padding: 14px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.modalSignupBtn:hover {
+  background-color: #3d2a1f;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.modalSignupBtn:active {
+  transform: translateY(1px);
+}
+
+.modalFootnote {
+  text-align: center;
+  margin-top: 24px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #695346;
+}

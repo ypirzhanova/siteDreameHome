@@ -8,11 +8,24 @@
     <title>Dwello</title>
   </head>
   <body>
-    <header>
+    <header class="container">
       <a href="#">
         <img class="logo" src="images/logo.svg" alt="Dwello" />
       </a>
 
+      <!-- Бургер-меню для телефонов -->
+      <div class="burger-menu">
+        <input type="checkbox" id="burger-checkbox" class="burger-checkbox" />
+        <label for="burger-checkbox" class="burger"></label>
+        <ul class="menu-list">
+          <li><a href="#" class="menu-item">Home</a></li>
+          <li><a href="#" class="menu-item">Service</a></li>
+          <li><a href="#" class="menu-item">Agents</a></li>
+          <li><a href="#" class="menu-item">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Обычное меню -->
       <nav class="menu">
         <ul>
           <li><a href="#">Home</a></li>
@@ -31,7 +44,7 @@
       <button class="signUpButton">Sign up</button>
     </header>
 
-    <main>
+    <main class="container">
       <!-- БАННЕР -->
       <section class="banner">
         <div>
@@ -167,87 +180,123 @@
 
       <!--OUR POPULAR RESIDENCES-->
 
-<section class="popularResidences">
-  <div class="popularHeader">
-    <h2 class="popularTitle">Our Popular Residences</h2>
-  </div>
+      <section class="popularResidences">
+        <div class="popularHeader">
+          <h2 class="popularTitle">Our Popular Residences</h2>
+        </div>
 
-  <div class="residencesGrid">
-    <div class="residenceCard">
-      <img class="cardImage" src="images/home_SanFrancisco.jpg" />
-      <div class="cardContent">
-        <div class="cardLocation">
-          <img src="images/location_icon.svg" alt="Location" class="locationIcon" />
-          San Francisco, California
-        </div>
-        <div class="cardDetails">
-          <span class="detailItem">
-            <img src="images/bed_icon.svg" alt="Rooms" class="detailIcon" />
-            4 Rooms
-          </span>
-          <span class="detailItem">
-            <img src="images/size_icon.svg" alt="Size" class="detailIcon" />
-            3,500 sq ft
-          </span>
-        </div>
-        <div class="cardPriceRow">
-          <button class="signupResidence">Sign up</button>
-          <div class="cardPrice">$2,500,000</div>
-        </div>
-      </div>
-    </div>
+        <div class="residencesGrid">
+          <div class="residenceCard">
+            <img class="cardImage" src="images/home_SanFrancisco.jpg" />
+            <div class="cardContent">
+              <div class="cardLocation">
+                <img
+                  src="images/location_icon.svg"
+                  alt="Location"
+                  class="locationIcon"
+                />
+                San Francisco, California
+              </div>
+              <div class="cardDetails">
+                <span class="detailItem">
+                  <img
+                    src="images/bed_icon.svg"
+                    alt="Rooms"
+                    class="detailIcon"
+                  />
+                  4 Rooms
+                </span>
+                <span class="detailItem">
+                  <img
+                    src="images/size_icon.svg"
+                    alt="Size"
+                    class="detailIcon"
+                  />
+                  3,500 sq ft
+                </span>
+              </div>
+              <div class="cardPriceRow">
+                <button class="signupResidence">Sign up</button>
+                <div class="cardPrice">$2,500,000</div>
+              </div>
+            </div>
+          </div>
 
-    <!-- Beverly Hills Residence -->
-    <div class="residenceCard">
-      <img class="cardImage" src="images/home_BeverlyHills.jpg" />
-      <div class="cardContent">
-        <div class="cardLocation">
-          <img src="images/location_icon.svg" alt="Location" class="locationIcon" />
-          Beverly Hills, California
-        </div>
-        <div class="cardDetails">
-          <span class="detailItem">
-            <img src="images/bed_icon.svg" alt="Rooms" class="detailIcon" />
-            3 Rooms
-          </span>
-          <span class="detailItem">
-            <img src="images/size_icon.svg" alt="Size" class="detailIcon" />
-            1,500 sq ft
-          </span>
-        </div>
-        <div class="cardPriceRow">
-          <button class="signupResidence">Sign up</button>
-          <div class="cardPrice">$850,000</div>
-        </div>
-      </div>
-    </div>
+          <!-- Beverly Hills Residence -->
+          <div class="residenceCard">
+            <img class="cardImage" src="images/home_BeverlyHills.jpg" />
+            <div class="cardContent">
+              <div class="cardLocation">
+                <img
+                  src="images/location_icon.svg"
+                  alt="Location"
+                  class="locationIcon"
+                />
+                Beverly Hills, California
+              </div>
+              <div class="cardDetails">
+                <span class="detailItem">
+                  <img
+                    src="images/bed_icon.svg"
+                    alt="Rooms"
+                    class="detailIcon"
+                  />
+                  3 Rooms
+                </span>
+                <span class="detailItem">
+                  <img
+                    src="images/size_icon.svg"
+                    alt="Size"
+                    class="detailIcon"
+                  />
+                  1,500 sq ft
+                </span>
+              </div>
+              <div class="cardPriceRow">
+                <button class="signupResidence">Sign up</button>
+                <div class="cardPrice">$850,000</div>
+              </div>
+            </div>
+          </div>
 
-    <!-- Palo Alto Residence -->
-    <div class="residenceCard">
-      <img class="cardImage" src="images/home_PaloAlto.jpg" />
-      <div class="cardContent">
-        <div class="cardLocation">
-          <img src="images/location_icon.svg" alt="Location" class="locationIcon" />
-          Palo Alto, California
+          <!-- Palo Alto Residence -->
+          <div class="residenceCard">
+            <img class="cardImage" src="images/home_PaloAlto.jpg" />
+            <div class="cardContent">
+              <div class="cardLocation">
+                <img
+                  src="images/location_icon.svg"
+                  alt="Location"
+                  class="locationIcon"
+                />
+                Palo Alto, California
+              </div>
+              <div class="cardDetails">
+                <span class="detailItem">
+                  <img
+                    src="images/bed_icon.svg"
+                    alt="Rooms"
+                    class="detailIcon"
+                  />
+                  6 Rooms
+                </span>
+                <span class="detailItem">
+                  <img
+                    src="images/size_icon.svg"
+                    alt="Size"
+                    class="detailIcon"
+                  />
+                  4,000 sq ft
+                </span>
+              </div>
+              <div class="cardPriceRow">
+                <button class="signupResidence">Sign up</button>
+                <div class="cardPrice">$3,700,000</div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="cardDetails">
-          <span class="detailItem">
-            <img src="images/bed_icon.svg" alt="Rooms" class="detailIcon" />
-            6 Rooms
-          </span>
-          <span class="detailItem">
-            <img src="images/size_icon.svg" alt="Size" class="detailIcon" />
-            4,000 sq ft
-          </span>
-        </div>
-        <div class="cardPriceRow">
-          <button class="signupResidence">Sign up</button>
-          <div class="cardPrice">$3,700,000</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
       <!--WHAT PEOPLE SAY ABOUT DWELLO-->
 
       <section class="whatPeopleSay">
@@ -386,7 +435,7 @@
         </div>
       </section>
     </main>
-    <footer class="mainFooter">
+    <footer class="container mainFooter">
       <div class="footerContent">
         <div class="footerBrand">
           <img class="footerLogo" src="images/logo.svg" alt="Dwello" />
@@ -455,5 +504,53 @@
         </div>
       </div>
     </footer>
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div id="registerModal" class="modalOverlay">
+      <div class="modalContainer">
+        <button class="modalCloseBtn" id="closeModalBtn" aria-label="Закрыть">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 6L18 18M18 6L6 18"
+              stroke="#2B1B12"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </button>
+        <h2 class="modalTitle">Регистрация</h2>
+        <form id="signupFormModal" class="modalForm">
+          <div class="inputGroup">
+            <label for="modalLogin">Логин</label>
+            <input
+              type="text"
+              id="modalLogin"
+              class="modalInput"
+              placeholder="Введите логин"
+              required
+              autocomplete="off"
+            />
+          </div>
+          <div class="inputGroup">
+            <label for="modalPassword">Пароль</label>
+            <input
+              type="password"
+              id="modalPassword"
+              class="modalInput"
+              placeholder="Введите пароль"
+              required
+            />
+          </div>
+          <button type="submit" class="modalSignupBtn">Sign up</button>
+          <div class="modalFootnote">
+            Создайте аккаунт для доступа к списку недвижимости
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="scripts/script.js"></script>
   </body>
 </html>
