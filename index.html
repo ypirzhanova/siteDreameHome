@@ -8,67 +8,71 @@
     <title>Dwello</title>
   </head>
   <body>
-    <header class="container">
-      <a href="#">
-        <img class="logo" src="images/logo.svg" alt="Dwello" />
-      </a>
+    <!-- HEADER с фоном на всю ширину -->
+    <header>
+      <div class="container header-container">
+        <a href="#">
+          <img class="logo" src="images/logo.svg" alt="Dwello" />
+        </a>
 
-      <!-- Бургер-меню для телефонов -->
-      <div class="burger-menu">
-        <input type="checkbox" id="burger-checkbox" class="burger-checkbox" />
-        <label for="burger-checkbox" class="burger"></label>
-        <ul class="menu-list">
-          <li><a href="#" class="menu-item">Home</a></li>
-          <li><a href="#" class="menu-item">Service</a></li>
-          <li><a href="#" class="menu-item">Agents</a></li>
-          <li><a href="#" class="menu-item">Contact</a></li>
-        </ul>
+        <!-- Бургер-меню для телефонов -->
+        <div class="burger-menu">
+          <input type="checkbox" id="burger-checkbox" class="burger-checkbox" />
+          <label for="burger-checkbox" class="burger"></label>
+          <ul class="menu-list">
+            <li><a href="#" class="menu-item">Home</a></li>
+            <li><a href="#" class="menu-item">Service</a></li>
+            <li><a href="#" class="menu-item">Agents</a></li>
+            <li><a href="#" class="menu-item">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Обычное меню -->
+        <nav class="menu">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Agents</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+
+        <a href="#" class="menuIconLoupe">
+          <img src="images/loupe_icon.svg" alt="Найти" />
+        </a>
+        <a href="#" class="menuIconUser">
+          <img src="images/user_icon.svg" alt="Аккаунт" />
+        </a>
+        <button class="signUpButton">Sign up</button>
       </div>
-
-      <!-- Обычное меню -->
-      <nav class="menu">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Service</a></li>
-          <li><a href="#">Agents</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
-
-      <a href="#" class="menuIconLoupe">
-        <img src="images/loupe_icon.svg" alt="Найти" />
-      </a>
-      <a href="#" class="menuIconUser">
-        <img src="images/user_icon.svg" alt="Аккаунт" />
-      </a>
-      <button class="signUpButton">Sign up</button>
     </header>
 
-    <main class="container">
-      <!-- БАННЕР -->
+    <main>
+      <!-- БАННЕР с фоном на всю ширину -->
       <section class="banner">
-        <div>
-          <div class="bannerText1">
-            <p>Find Your Dream Home</p>
+        <div class="container banner-container">
+          <div>
+            <div class="bannerText1">
+              <p>Find Your Dream Home</p>
+            </div>
+            <div class="bannerText2">
+              <p>
+                Explore our curated selection of exquisite properties meticulously
+                tailored to your unique dream home vision
+              </p>
+            </div>
+            <button class="signUpButton2">Sign up</button>
           </div>
-          <div class="bannerText2">
-            <p>
-              Explore our curated selection of exquisite properties meticulously
-              tailored to your unique dream home vision
-            </p>
+          <div>
+            <img class="homeImg" src="images/home.png" alt="Дом" />
           </div>
-          <button class="signUpButton2">Sign up</button>
-        </div>
-        <div>
-          <img class="homeImg" src="images/home.png" alt="Дом" />
         </div>
       </section>
 
-      <!-- ФОРМА ДЛЯ ПОКУПКИ -->
-
+      <!-- ФОРМА ДЛЯ ПОКУПКИ (специальный случай - наложение) -->
       <form action="buyForm">
         <section class="findContainer">
-          <div class="findForm">
+          <div class="container findForm">
             <div class="inputForm">
               <img src="images/location_icon.svg" class="inputIcon" />
               <input type="text" placeholder="Location" />
@@ -81,41 +85,41 @@
               <img src="images/price_icon.svg" class="inputIcon" />
               <input type="text" placeholder="Price Range" />
             </div>
-
             <button class="signUpButton3">Sign up</button>
           </div>
         </section>
       </form>
 
       <!-- We Help You To Find Your Dream Home -->
-
       <section class="homeDescription">
-        <div>
-          <img class="homeImg2" src="images/home_description.jpg" alt="Дом" />
-        </div>
-        <div>
-          <div class="homeText1">
-            <p>We Help You To Find Your Dream Home</p>
+        <div class="container homeDescription-container">
+          <div>
+            <img class="homeImg2" src="images/home_description.jpg" alt="Дом" />
           </div>
-          <div class="homeText2">
-            <p>
-              From cozy cottages to luxurious estates, our dedicated team guides
-              you through every step of the journey, ensuring your dream home
-              becomes a reality
-            </p>
-          </div>
-          <div class="stats">
-            <div class="statItem">
-              <div class="statNumber">8K+</div>
-              <div class="statLabel">Houses Available</div>
+          <div>
+            <div class="homeText1">
+              <p>We Help You To Find Your Dream Home</p>
             </div>
-            <div class="statItem">
-              <div class="statNumber">6K+</div>
-              <div class="statLabel">Houses Sold</div>
+            <div class="homeText2">
+              <p>
+                From cozy cottages to luxurious estates, our dedicated team guides
+                you through every step of the journey, ensuring your dream home
+                becomes a reality
+              </p>
             </div>
-            <div class="statItem">
-              <div class="statNumber">2K+</div>
-              <div class="statLabel">Trusted Agents</div>
+            <div class="stats">
+              <div class="statItem">
+                <div class="statNumber">8K+</div>
+                <div class="statLabel">Houses Available</div>
+              </div>
+              <div class="statItem">
+                <div class="statNumber">6K+</div>
+                <div class="statLabel">Houses Sold</div>
+              </div>
+              <div class="statItem">
+                <div class="statNumber">2K+</div>
+                <div class="statLabel">Trusted Agents</div>
+              </div>
             </div>
           </div>
         </div>
@@ -123,387 +127,396 @@
 
       <!-- WHY CHOOSE US -->
       <section class="whyChooseUs">
-        <div class="sectionHeader">
-          <div class="sectionBadge">Why Choose Us</div>
-          <h2 class="sectionTitle">
-            Elevating Your Home Buying Experience with Expertise, Integrity, and
-            Unmatched Personalized Service
-          </h2>
-        </div>
-
-        <div class="featuresGrid">
-          <div class="featureCard">
-            <div class="featureIcon">
-              <img src="images/location2_icon.svg" />
-            </div>
-            <h3 class="featureTitle">Expert Guidance</h3>
-            <p class="featureDescription">
-              Benefit from our team's seasoned expertise for a smooth buying
-              experience
-            </p>
+        <div class="container">
+          <div class="sectionHeader">
+            <div class="sectionBadge">Why Choose Us</div>
+            <h2 class="sectionTitle">
+              Elevating Your Home Buying Experience with Expertise, Integrity, and
+              Unmatched Personalized Service
+            </h2>
           </div>
 
-          <div class="featureCard">
-            <div class="featureIcon">
-              <img src="images/service_icon.svg" />
+          <div class="featuresGrid">
+            <div class="featureCard">
+              <div class="featureIcon">
+                <img src="images/location2_icon.svg" />
+              </div>
+              <h3 class="featureTitle">Expert Guidance</h3>
+              <p class="featureDescription">
+                Benefit from our team's seasoned expertise for a smooth buying
+                experience
+              </p>
             </div>
-            <h3 class="featureTitle">Personalized Service</h3>
-            <p class="featureDescription">
-              Our services adapt to your unique needs, making your journey
-              stress-free
-            </p>
-          </div>
 
-          <div class="featureCard">
-            <div class="featureIcon">
-              <img src="images/document_icon.svg" />
+            <div class="featureCard">
+              <div class="featureIcon">
+                <img src="images/service_icon.svg" />
+              </div>
+              <h3 class="featureTitle">Personalized Service</h3>
+              <p class="featureDescription">
+                Our services adapt to your unique needs, making your journey
+                stress-free
+              </p>
             </div>
-            <h3 class="featureTitle">Transparent Process</h3>
-            <p class="featureDescription">
-              Stay informed with our clear and honest approach to buying your
-              home
-            </p>
-          </div>
 
-          <div class="featureCard">
-            <div class="featureIcon">
-              <img src="images/hands_icon.svg" />
+            <div class="featureCard">
+              <div class="featureIcon">
+                <img src="images/document_icon.svg" />
+              </div>
+              <h3 class="featureTitle">Transparent Process</h3>
+              <p class="featureDescription">
+                Stay informed with our clear and honest approach to buying your
+                home
+              </p>
             </div>
-            <h3 class="featureTitle">Exceptional Support</h3>
-            <p class="featureDescription">
-              Providing peace of mind with our responsive and attentive customer
-              service
-            </p>
+
+            <div class="featureCard">
+              <div class="featureIcon">
+                <img src="images/hands_icon.svg" />
+              </div>
+              <h3 class="featureTitle">Exceptional Support</h3>
+              <p class="featureDescription">
+                Providing peace of mind with our responsive and attentive customer
+                service
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!--OUR POPULAR RESIDENCES-->
-
+      <!-- OUR POPULAR RESIDENCES -->
       <section class="popularResidences">
-        <div class="popularHeader">
-          <h2 class="popularTitle">Our Popular Residences</h2>
-        </div>
-
-        <div class="residencesGrid">
-          <div class="residenceCard">
-            <img class="cardImage" src="images/home_SanFrancisco.jpg" />
-            <div class="cardContent">
-              <div class="cardLocation">
-                <img
-                  src="images/location_icon.svg"
-                  alt="Location"
-                  class="locationIcon"
-                />
-                San Francisco, California
-              </div>
-              <div class="cardDetails">
-                <span class="detailItem">
-                  <img
-                    src="images/bed_icon.svg"
-                    alt="Rooms"
-                    class="detailIcon"
-                  />
-                  4 Rooms
-                </span>
-                <span class="detailItem">
-                  <img
-                    src="images/size_icon.svg"
-                    alt="Size"
-                    class="detailIcon"
-                  />
-                  3,500 sq ft
-                </span>
-              </div>
-              <div class="cardPriceRow">
-                <button class="signupResidence">Sign up</button>
-                <div class="cardPrice">$2,500,000</div>
-              </div>
-            </div>
+        <div class="container">
+          <div class="popularHeader">
+            <h2 class="popularTitle">Our Popular Residences</h2>
           </div>
 
-          <!-- Beverly Hills Residence -->
-          <div class="residenceCard">
-            <img class="cardImage" src="images/home_BeverlyHills.jpg" />
-            <div class="cardContent">
-              <div class="cardLocation">
-                <img
-                  src="images/location_icon.svg"
-                  alt="Location"
-                  class="locationIcon"
-                />
-                Beverly Hills, California
-              </div>
-              <div class="cardDetails">
-                <span class="detailItem">
+          <div class="residencesGrid">
+            <div class="residenceCard">
+              <img class="cardImage" src="images/home_SanFrancisco.jpg" />
+              <div class="cardContent">
+                <div class="cardLocation">
                   <img
-                    src="images/bed_icon.svg"
-                    alt="Rooms"
-                    class="detailIcon"
+                    src="images/location_icon.svg"
+                    alt="Location"
+                    class="locationIcon"
                   />
-                  3 Rooms
-                </span>
-                <span class="detailItem">
-                  <img
-                    src="images/size_icon.svg"
-                    alt="Size"
-                    class="detailIcon"
-                  />
-                  1,500 sq ft
-                </span>
-              </div>
-              <div class="cardPriceRow">
-                <button class="signupResidence">Sign up</button>
-                <div class="cardPrice">$850,000</div>
+                  San Francisco, California
+                </div>
+                <div class="cardDetails">
+                  <span class="detailItem">
+                    <img
+                      src="images/bed_icon.svg"
+                      alt="Rooms"
+                      class="detailIcon"
+                    />
+                    4 Rooms
+                  </span>
+                  <span class="detailItem">
+                    <img
+                      src="images/size_icon.svg"
+                      alt="Size"
+                      class="detailIcon"
+                    />
+                    3,500 sq ft
+                  </span>
+                </div>
+                <div class="cardPriceRow">
+                  <button class="signupResidence">Sign up</button>
+                  <div class="cardPrice">$2,500,000</div>
+                </div>
               </div>
             </div>
-          </div>
 
-          <!-- Palo Alto Residence -->
-          <div class="residenceCard">
-            <img class="cardImage" src="images/home_PaloAlto.jpg" />
-            <div class="cardContent">
-              <div class="cardLocation">
-                <img
-                  src="images/location_icon.svg"
-                  alt="Location"
-                  class="locationIcon"
-                />
-                Palo Alto, California
-              </div>
-              <div class="cardDetails">
-                <span class="detailItem">
+            <div class="residenceCard">
+              <img class="cardImage" src="images/home_BeverlyHills.jpg" />
+              <div class="cardContent">
+                <div class="cardLocation">
                   <img
-                    src="images/bed_icon.svg"
-                    alt="Rooms"
-                    class="detailIcon"
+                    src="images/location_icon.svg"
+                    alt="Location"
+                    class="locationIcon"
                   />
-                  6 Rooms
-                </span>
-                <span class="detailItem">
-                  <img
-                    src="images/size_icon.svg"
-                    alt="Size"
-                    class="detailIcon"
-                  />
-                  4,000 sq ft
-                </span>
+                  Beverly Hills, California
+                </div>
+                <div class="cardDetails">
+                  <span class="detailItem">
+                    <img
+                      src="images/bed_icon.svg"
+                      alt="Rooms"
+                      class="detailIcon"
+                    />
+                    3 Rooms
+                  </span>
+                  <span class="detailItem">
+                    <img
+                      src="images/size_icon.svg"
+                      alt="Size"
+                      class="detailIcon"
+                    />
+                    1,500 sq ft
+                  </span>
+                </div>
+                <div class="cardPriceRow">
+                  <button class="signupResidence">Sign up</button>
+                  <div class="cardPrice">$850,000</div>
+                </div>
               </div>
-              <div class="cardPriceRow">
-                <button class="signupResidence">Sign up</button>
-                <div class="cardPrice">$3,700,000</div>
+            </div>
+
+            <div class="residenceCard">
+              <img class="cardImage" src="images/home_PaloAlto.jpg" />
+              <div class="cardContent">
+                <div class="cardLocation">
+                  <img
+                    src="images/location_icon.svg"
+                    alt="Location"
+                    class="locationIcon"
+                  />
+                  Palo Alto, California
+                </div>
+                <div class="cardDetails">
+                  <span class="detailItem">
+                    <img
+                      src="images/bed_icon.svg"
+                      alt="Rooms"
+                      class="detailIcon"
+                    />
+                    6 Rooms
+                  </span>
+                  <span class="detailItem">
+                    <img
+                      src="images/size_icon.svg"
+                      alt="Size"
+                      class="detailIcon"
+                    />
+                    4,000 sq ft
+                  </span>
+                </div>
+                <div class="cardPriceRow">
+                  <button class="signupResidence">Sign up</button>
+                  <div class="cardPrice">$3,700,000</div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <!--WHAT PEOPLE SAY ABOUT DWELLO-->
 
+      <!-- WHAT PEOPLE SAY ABOUT DWELLO -->
       <section class="whatPeopleSay">
-        <div class="whatHeader">
-          <h2 class="whatTitle">What People Say About Dwello</h2>
-        </div>
-
-        <div class="reviewsContainer">
-          <div class="reviewCard">
-            <img src="images/comment1.jpg" alt="Comment" class="topImage" />
-            <div class="reviewContent">
-              <div class="reviewHeader">
-                <div class="reviewerInfo">
-                  <img
-                    src="images/sarah1.png"
-                    alt="Sarah Nguyen"
-                    class="reviewerImage"
-                  />
-                  <div class="reviewerDetails">
-                    <h3 class="reviewerName">Sarah Nguyen</h3>
-                    <p class="reviewerLocation">San Francisco</p>
-                  </div>
-                </div>
-                <img src="images/mark5.svg" alt="Rating" class="ratingIcon" />
-              </div>
-              <p class="reviewText">
-                Dwello truly cares about their clients. They listened to my
-                needs and preferences and helped me find the perfect home in the
-                Bay Area. Their professionalism and attention to detail are
-                unmatched.
-              </p>
-            </div>
+        <div class="container">
+          <div class="whatHeader">
+            <h2 class="whatTitle">What People Say About Dwello</h2>
           </div>
 
-          <div class="reviewCard">
-            <img src="images/comment2.jpg" alt="Comment" class="topImage" />
-            <div class="reviewContent">
-              <div class="reviewHeader">
-                <div class="reviewerInfo">
-                  <img
-                    src="images/michael2.png"
-                    alt="Michael Rodriguez"
-                    class="reviewerImage"
-                  />
-                  <div class="reviewerDetails">
-                    <h3 class="reviewerName">Michael Rodriguez</h3>
-                    <p class="reviewerLocation">San Diego</p>
+          <div class="reviewsContainer">
+            <div class="reviewCard">
+              <img src="images/comment1.jpg" alt="Comment" class="topImage" />
+              <div class="reviewContent">
+                <div class="reviewHeader">
+                  <div class="reviewerInfo">
+                    <img
+                      src="images/sarah1.png"
+                      alt="Sarah Nguyen"
+                      class="reviewerImage"
+                    />
+                    <div class="reviewerDetails">
+                      <h3 class="reviewerName">Sarah Nguyen</h3>
+                      <p class="reviewerLocation">San Francisco</p>
+                    </div>
                   </div>
+                  <img src="images/mark5.svg" alt="Rating" class="ratingIcon" />
                 </div>
-                <img src="images/mark4.svg" alt="Rating" class="ratingIcon" />
+                <p class="reviewText">
+                  Dwello truly cares about their clients. They listened to my
+                  needs and preferences and helped me find the perfect home in the
+                  Bay Area. Their professionalism and attention to detail are
+                  unmatched.
+                </p>
               </div>
-              <p class="reviewText">
-                I had a fantastic experience working with Dwello. Their
-                expertise and personalized service exceeded my expectations. I
-                found my dream home quickly and smoothly. Highly recommended!
-              </p>
             </div>
-          </div>
 
-          <div class="reviewCard">
-            <img src="images/comment3.jpg" alt="Comment" class="topImage" />
-            <div class="reviewContent">
-              <div class="reviewHeader">
-                <div class="reviewerInfo">
-                  <img
-                    src="images/emily3.png"
-                    alt="Emily Johnson"
-                    class="reviewerImage"
-                  />
-                  <div class="reviewerDetails">
-                    <h3 class="reviewerName">Emily Johnson</h3>
-                    <p class="reviewerLocation">Los Angeles</p>
+            <div class="reviewCard">
+              <img src="images/comment2.jpg" alt="Comment" class="topImage" />
+              <div class="reviewContent">
+                <div class="reviewHeader">
+                  <div class="reviewerInfo">
+                    <img
+                      src="images/michael2.png"
+                      alt="Michael Rodriguez"
+                      class="reviewerImage"
+                    />
+                    <div class="reviewerDetails">
+                      <h3 class="reviewerName">Michael Rodriguez</h3>
+                      <p class="reviewerLocation">San Diego</p>
+                    </div>
                   </div>
+                  <img src="images/mark4.svg" alt="Rating" class="ratingIcon" />
                 </div>
-                <img src="images/mark5.svg" alt="Rating" class="ratingIcon" />
+                <p class="reviewText">
+                  I had a fantastic experience working with Dwello. Their
+                  expertise and personalized service exceeded my expectations. I
+                  found my dream home quickly and smoothly. Highly recommended!
+                </p>
               </div>
-              <p class="reviewText">
-                Dwello made my dream of owning a home a reality! Their team
-                provided exceptional support and guided me through every step of
-                the process. I couldn't be happier with my new home!
-              </p>
+            </div>
+
+            <div class="reviewCard">
+              <img src="images/comment3.jpg" alt="Comment" class="topImage" />
+              <div class="reviewContent">
+                <div class="reviewHeader">
+                  <div class="reviewerInfo">
+                    <img
+                      src="images/emily3.png"
+                      alt="Emily Johnson"
+                      class="reviewerImage"
+                    />
+                    <div class="reviewerDetails">
+                      <h3 class="reviewerName">Emily Johnson</h3>
+                      <p class="reviewerLocation">Los Angeles</p>
+                    </div>
+                  </div>
+                  <img src="images/mark5.svg" alt="Rating" class="ratingIcon" />
+                </div>
+                <p class="reviewText">
+                  Dwello made my dream of owning a home a reality! Their team
+                  provided exceptional support and guided me through every step of
+                  the process. I couldn't be happier with my new home!
+                </p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="arrowsContainer">
-          <img
-            src="images/arrowLeft_icon.svg"
-            alt="Previous"
-            class="arrowIcon"
-          />
-          <img src="images/arrowRight_icon.svg" alt="Next" class="arrowIcon" />
+          <div class="arrowsContainer">
+            <img
+              src="images/arrowLeft_icon.svg"
+              alt="Previous"
+              class="arrowIcon"
+            />
+            <img src="images/arrowRight_icon.svg" alt="Next" class="arrowIcon" />
+          </div>
         </div>
       </section>
 
       <!-- Do You Have Any Questions? -->
-
       <section class="anyQuestions">
-        <div class="questionsHeader">
-          <h2 class="questionsTitle">
-            Do You Have Any Questions? Get Help From Us
-          </h2>
-        </div>
-
-        <div class="questionsText">
-          <div class="questionsRow">
-            <div class="questionsItem">
-              <img
-                src="images/checkMark_icon.svg"
-                alt="Check"
-                class="questionIcon"
-              />
-              <p>Chat live with our support team</p>
-            </div>
-            <div class="questionsItem">
-              <img
-                src="images/checkMark_icon.svg"
-                alt="Check"
-                class="questionIcon"
-              />
-              <p>Browse our FAQ</p>
-            </div>
+        <div class="container">
+          <div class="questionsHeader">
+            <h2 class="questionsTitle">
+              Do You Have Any Questions? Get Help From Us
+            </h2>
           </div>
 
-          <form class="questionsForm" action="#">
-            <div class="questionInputWrapper">
-              <img src="images/email_icon.svg" alt="Check" class="inputIcon" />
-              <input
-                type="email"
-                placeholder="Enter your email address..."
-                class="questionInput inputWithIcon"
-                required
-              />
+          <div class="questionsText">
+            <div class="questionsRow">
+              <div class="questionsItem">
+                <img
+                  src="images/checkMark_icon.svg"
+                  alt="Check"
+                  class="questionIcon"
+                />
+                <p>Chat live with our support team</p>
+              </div>
+              <div class="questionsItem">
+                <img
+                  src="images/checkMark_icon.svg"
+                  alt="Check"
+                  class="questionIcon"
+                />
+                <p>Browse our FAQ</p>
+              </div>
             </div>
-            <button type="submit" class="questionSubmitBtn">Submit</button>
-          </form>
+
+            <form class="questionsForm" action="#">
+              <div class="questionInputWrapper">
+                <img src="images/email_icon.svg" alt="Check" class="inputIcon" />
+                <input
+                  type="email"
+                  placeholder="Enter your email address..."
+                  class="questionInput inputWithIcon"
+                  required
+                />
+              </div>
+              <button type="submit" class="questionSubmitBtn">Submit</button>
+            </form>
+          </div>
         </div>
       </section>
     </main>
-    <footer class="container mainFooter">
-      <div class="footerContent">
-        <div class="footerBrand">
-          <img class="footerLogo" src="images/logo.svg" alt="Dwello" />
-          <p class="footerDescription">
-            Bringing you closer to your dream home, one click at a time.
-          </p>
-        </div>
 
-        <div class="footerColumn">
-          <h4>About</h4>
-          <ul>
-            <li><a href="#">Our Story</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Resources</a></li>
-          </ul>
-        </div>
+    <!-- FOOTER -->
+    <footer class="mainFooter">
+      <div class="container footer-container">
+        <div class="footerContent">
+          <div class="footerBrand">
+            <img class="footerLogo" src="images/logo.svg" alt="Dwello" />
+            <p class="footerDescription">
+              Bringing you closer to your dream home, one click at a time.
+            </p>
+          </div>
 
-        <div class="footerColumn">
-          <h4>Support</h4>
-          <ul>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </div>
+          <div class="footerColumn">
+            <h4>About</h4>
+            <ul>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Our Team</a></li>
+              <li><a href="#">Resources</a></li>
+            </ul>
+          </div>
 
-        <div class="footerColumn">
-          <h4>Find Us</h4>
-          <ul>
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Locations</a></li>
-            <li><a href="#">Newsletter</a></li>
-          </ul>
-        </div>
+          <div class="footerColumn">
+            <h4>Support</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
 
-        <div class="footerColumn">
-          <h4>Our Social</h4>
-          <ul class="socialList">
-            <li>
-              <img
-                src="images/instagram_icon.svg"
-                alt="Instagram"
-                class="socialIcon"
-              />
-              <a href="#">Instagram</a>
-            </li>
-            <li>
-              <img
-                src="images/facebook_icon.svg"
-                alt="Facebook"
-                class="socialIcon"
-              />
-              <a href="#">Facebook</a>
-            </li>
-            <li>
-              <img
-                src="images/twitterx_icon.svg"
-                alt="Twitter (x)"
-                class="socialIcon"
-              />
-              <a href="#">Twitter (x)</a>
-            </li>
-          </ul>
+          <div class="footerColumn">
+            <h4>Find Us</h4>
+            <ul>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Locations</a></li>
+              <li><a href="#">Newsletter</a></li>
+            </ul>
+          </div>
+
+          <div class="footerColumn">
+            <h4>Our Social</h4>
+            <ul class="socialList">
+              <li>
+                <img
+                  src="images/instagram_icon.svg"
+                  alt="Instagram"
+                  class="socialIcon"
+                />
+                <a href="#">Instagram</a>
+              </li>
+              <li>
+                <img
+                  src="images/facebook_icon.svg"
+                  alt="Facebook"
+                  class="socialIcon"
+                />
+                <a href="#">Facebook</a>
+              </li>
+              <li>
+                <img
+                  src="images/twitterx_icon.svg"
+                  alt="Twitter (x)"
+                  class="socialIcon"
+                />
+                <a href="#">Twitter (x)</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>
+
     <!-- МОДАЛЬНОЕ ОКНО -->
     <div id="registerModal" class="modalOverlay">
       <div class="modalContainer">

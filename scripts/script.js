@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("registerModal");
-  const signUpButtons = document.querySelectorAll(".signUpButton"); // Кнопка в хедере
+  const signUpButtons = document.querySelectorAll(".signUpButton"); 
   const closeModalBtn = document.getElementById("closeModalBtn");
 
   function openModal() {

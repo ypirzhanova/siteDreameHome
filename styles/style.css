@@ -9,13 +9,28 @@ html {
 .container {
   max-width: 1440px;
   margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding: 0;
+  }
 }
 
 header {
   display: flex;
   background-color: #fef7f2;
-  justify-content: center;
   width: 100%;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 header > div,
@@ -29,7 +44,7 @@ header > button {
   max-width: 5.8125rem;
   max-height: 1.8125rem;
   margin-top: 3.0625rem;
-  margin-left: 6.5rem;
+  margin-left: 0;
 }
 
 .menu li {
@@ -67,13 +82,13 @@ header > button {
   gap: 4.125rem;
   margin-top: 3.3125rem;
   margin-left: 18.0625rem;
-  margin-right: 8.5625rem;
+  margin-right:  8.5625rem;
   line-height: 100%;
 }
 
 .menuIconUser {
   margin-top: 52px;
-  margin-right: 44px;
+  margin-right: 0;
   width: 24px;
   height: 24px;
 }
@@ -118,7 +133,7 @@ header > button {
   color: #ffffff;
   border-radius: 0.5rem;
   margin-top: 2.5rem;
-  margin-left: 2.75rem;
+  margin-left: 0;
   transition:
     background-color 0.3s ease,
     transform 0.2s ease,
@@ -262,8 +277,14 @@ header > button {
 .banner {
   display: flex;
   background-color: #fef7f2;
-  justify-content: center;
   width: 100%;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .banner > div:first-child {
@@ -276,8 +297,7 @@ header > button {
   font-size: 68px;
   width: 514px;
   font-weight: 800;
-  margin-top: 167px;
-  margin-left: 104px;
+  margin-left: 0;
   line-height: 120%;
 }
 
@@ -290,7 +310,7 @@ header > button {
   font-weight: 700;
   font-size: 18px;
   margin-top: 32px;
-  margin-left: 103px;
+  margin-left: 0;
   color: #4f3527;
   width: 413px;
   line-height: 160%;
@@ -309,7 +329,7 @@ header > button {
   color: #ffffff;
   border-radius: 8px;
   margin-top: 72px;
-  margin-left: 104px;
+  margin-left: 0;
   transition:
     background-color 0.3s ease,
     transform 0.2s ease,
@@ -358,7 +378,6 @@ header > button {
   min-height: 160px;
   background-color: #ddc7bb;
   border-radius: 18px;
-  gap: 24px;
   padding: 0;
 }
 
@@ -460,6 +479,13 @@ input {
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+}
+
+.homeDescription-container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
 }
 
 .homeImg2 {
@@ -1984,3 +2010,4 @@ input {
   font-weight: 500;
   color: #695346;
 }
+
